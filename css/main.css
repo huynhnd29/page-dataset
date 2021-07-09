@@ -19,7 +19,6 @@ ul{
 }
 
 
-
 /* Header Style */
 
 .header{
@@ -159,18 +158,14 @@ ul{
     cursor: pointer;
     position: relative;
 }
+.active{
+    border-bottom: 4px solid #000;
+}
 .ic > span{
     display: block;
     margin-top: 8px;
 }
-.line{
-    position: absolute;
-    top: 100%;
-    width: 90%;
-    left: 5%;
-    transform: translateY(-4px);
-    border-top: 4px solid #000;
-}
+
 
 
 .sliderText{
@@ -197,6 +192,10 @@ ul{
 .ct a:hover{
     opacity: 0.7;
     transition: .4s;
+}
+
+.sliderImg{
+    display: none;
 }
 
 
@@ -444,6 +443,10 @@ ul{
     gap: 36px;
 }
 
+.bc img{
+    width: 100%;
+}
+
 
 /* download */
 
@@ -620,6 +623,52 @@ ul{
 
 
 /* Responsive */
+
+
+@media screen and (max-width: 460px){
+    .inputTime{
+        grid-template-columns: 1fr !important;
+    }
+    .registerContent{
+        grid-template-columns: 1fr !important;
+    }
+}
+
+@media screen and (max-width: 680px){
+    .sliderIcon .ic{
+        height: 100px;
+    }
+    .business{
+        background-image: url("../image/back-680.png");
+    }
+    .blogContent .bc{
+        grid-template-columns: 1fr;
+    }
+
+    .ctc{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .downloadItem{
+        grid-template-columns: 1fr;
+    }
+    .downloadItem a{
+        display: flex !important;
+    }
+    .downloadItem img{
+        max-width: 150px;
+    }
+
+    .footerList{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .social{
+        grid-template-columns: repeat(6,1fr);
+        margin-top: 30px;
+    }
+}
+
+
 @media screen and (max-width: 960px){
     .nav{
         justify-content: space-between;
@@ -664,7 +713,57 @@ ul{
         display: list-item;
     }
 
+    .slider{
+        background-image: none;
+    }
+
+    .sliderBlock{
+        padding: 0;
+    }
+
+    .sliderIcon{
+        width: 100%;
+        justify-content: start;
+    }
+
+    .sliderText{
+        padding: 24px;
+        max-width: 100%;
+    }
+    .sliderText h1{
+        font-size: 40px ;
+    }
+    .sliderImg{
+        display: block;
+        width: 100%;        
+    }
+    .sliderImg img{
+        width: 100%;
+    }
+
+    .reserve{
+        background-image: none;
+    }
+    .grid{
+        display: block;
+    }
+
+    .downloadItem{
+        gap: 24px;
+    }
+    .downloadItem a {
+        display: grid;
+        grid-template-columns: 50% 40% 10%;
+    }
+    .downloadItem img{
+        width: 100%;
+    }
+
 }
+
+
+
+
 
 .show{
     display: block !important;
