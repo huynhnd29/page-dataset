@@ -5,353 +5,280 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="image/favicon.ico">
-    <title>Uber</title>
+    <title>Dataset</title>
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
+
     <header class="header">
-        <div class="nav">
-            <ul class="webName">
-                <li id="webName">Uber</li>
-            </ul>
-            <ul class="leftNav" id="leftNav">
-                <li id="company">
-                    <a href="#company" onclick="myFunction()">Company &#160;<i class="fas fa-chevron-down"></i></a>
-                    <ul class="listbox" id="listbox">
-                        <li><a href="">About us</a></li>
-                        <li><a href="">Our offerings</a></li>
-                        <li><a href="">How Uber works</a></li>
-                        <li><a href="">Global citizenship</a></li>
-                        <li><a href="">Newsroom</a></li>
-                        <li><a href="">Investor relations</a></li>
-                        <li><a href="">Blog</a></li>
-                        <li><a href="">Careers</a></li>
-                    </ul>
-                </li>
-                <li id="safety"><a href="#safety">Safety</a></li>
-                <li id="help"><a href="#help">Help</a></li>
-                <li id="covid-19"><a href="#covid-19">COVID-19 resouces</a></li>
-            </ul>
-            <ul class="rightNav">
-                <li id="products"><button><i class="fas fa-th"></i>&#160; Products</button></li>
-                <li id="login"><a href="#login"><i class="fas fa-user"></i> &#160;<span>Log in</span></a></li>
-                <li id="signUp"><a href="#signUp">Sign up</a></li>
-                <li id="btnOpen"> <a href="#" onclick="openFunction()"> <i class="fas fa-bars"></i> </a> </li>
-            </ul>
+        <div class="container">
+            <div class="logo">
+                <a href=""><img src="image/logo.jpg" alt=""></a>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="">About us</a></li>
+                    <li><a href="">Products & Service</a></li>
+                    <li><a href="">News</a></li>
+                    <li><a href="">Careers</a></li>
+                </ul>
+            </div>
+            <div class="login">
+                <ul>
+                    <li><a href="">Log In</a></li>
+                    <li><a href="">Sign Up</a></li>
+                </ul>
+            </div>
         </div>
     </header>
-    <main class="main">
-        <div class="slider">
-            <div class="sliderContent">
-                <div class="sliderBlock">
-                    <div class="sliderIcon" id="sliderIcon">
-                        <div class="ic active">
-                            <img src="image/Earn-filled.svg" alt="">
-                            <span>Drive or deliver</span>
-                        </div>
-                        <div class="ic">
-                            <img src="image/car-front-outlined.svg" alt="">
-                            <span>Eat</span>
-                        </div>
-                        <div class="ic">
-                            <img src="image/restaurant-outlined.svg" alt="">
-                            <span>Ride</span>
-                        </div>
-                    </div>
-                    <div class="sliderText">
-                        <div class="ct">
-                            <div class="text">
-                                <h1>Get in the driver’s seat and get paid</h1>
-                                <p>Drive on the platform with the largest network of active riders.
-                                </p>
-                            </div>
-                            <div>
-                                <a href="">Sign up to drive</a>
-                            </div>
-                            <span>Learn more about driving and delivering
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="sliderImg">
-                    <img src="image/slider-960.jpg" alt="">
-                </div>
+
+
+    <div class="aboutUs">
+        <div class="container">
+            <div class="title">
+                <h1>About Us</h1>
+                <div class="line"></div>
+            </div>
+            <div class="content">
+                <h2>A Data Crowdsourcing Platform</h2>
+                <p>Dataset is a data crowdsourcing platform that powered by new technologies, social media and web 2.0.
+                    Dataset have brought organizations closer to their stakeholders, laying the groundwork for new ways
+                    of collaborating and creating value together like never before.</p>
             </div>
         </div>
+    </div>
 
-        <div class="business">
-            <div class="container">
-                <div class="businessContent">
-                    <h2>Uber for Business
+
+    <div class="slider">
+        <img src="image/slider.jpg" alt="">
+        <div class="content">
+            <h2>Speard facts, not fear </h2>
+            <p>New cases of COVID-19 are increasing rapidly at astonishing rates globally. Dataset has started to help
+                in processing the data into the spread and control of this virus.</p>
+            <a href="">READ OUR STORY</a>
+        </div>
+    </div>
+
+
+    <div class="product">
+        <div class="container">
+            <div class="title">
+                <h1>Products and Services</h1>
+                <div class="line"></div>
+            </div>
+
+            <div class="content">
+                <div class="item">
+                    <div class="img">
+                        <img src="image/product1.png" alt="">
+                        <a href="">
+                            <div class="icon"><i class="fas fa-chevron-right"></i></div>
+                        </a>
+                    </div>
+                    <p>Data Synthesis</p>
+                </div>
+                <div class="item">
+                    <div class="square"></div>
+                    <div class="text">
+                        <h2>Data Labeling</h2>
+                        <p>Identifying raw data and adding informative labels to provide context so that a machine
+                            learning model can learn from it.</p>
+                    </div>
+                    <a href="">
+                        <div class="icon">
+                            Check avaibility
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                    </a>
+                </div>
+                <div class="item">
+                    <div class="img">
+                        <img src="image/product3.png" alt="">
+                        <a href="">
+                            <div class="icon">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <p>Content Moderation</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="whyUs">
+        <div class="container">
+            <div class="ourService">
+                <div class="item">
+                    <img src="image/service1.png" alt="">
+                    <div class="text">
+                        <p>500+</p>
+                        <span>Active user</span>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="image/service2.png" alt="">
+                    <div class="text">
+                        <p>300+</p>
+                        <span>Members in our
+                            crowdsourcing community</span>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="image/service3.png" alt="">
+                    <div class="text">
+                        <p>2</p>
+                        <span>Strategic partners</span>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="image/service4.png" alt="">
+                    <div class="text">
+                        <p>4+</p>
+                        <span> Loyal Clients</span>
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <div class="title">
+                    <h3>Why Dataset</h3>
+                    <div class="line"></div>
+                </div>
+                <div class="text">
+                    <h2>Access to a relatively inexpensive and scalable workforce
                     </h2>
-                    <p>Transform the way your company moves and feeds its people.
-                    </p>
-                    <a href="">See how</a>
+                    <p>By engaging a group of crowd workers, you can distribute hundreds of thousands of machine
+                        learning microtasks quickly and cost-effectively. </p>
                 </div>
             </div>
         </div>
+    </div>
 
-        <div class="reserve">
-            <div class="container">
-                <div class="grid">
-                    <div class="reserveContent">
-                        <div class="rct">
-                            <h2>Reserve a ride in advance
-                            </h2>
-                            <p>Complete your plans today by reserving a ride. Request a ride up to 30 days in advance,
-                                at any time and on any day of the year.
-
-                            </p>
-                            <div id="rctlink">
-                                <a href="">Learn about Uber Reserve
-
-                                </a>
-                            </div>
-                            <div id="Destination">Destination
-                            </div>
-                            <div class="input">
-                                <input type="text" placeholder="Where from?">
-                                <input type="text" placeholder="Where to?">
-
-                                <div class="sq"></div>
-
-                            </div>
-                            <div id="choose">
-                                Choose date and time
-                            </div>
-                            <div class="inputTime">
-                                <input type="date" value="">
-                                <input type="time" value="16:42">
-                            </div>
-                            <div class="btn">
-                                <a href=""> Reserve a ride </a>
-                            </div>
-                        </div>
-
-                    </div>
+    <div class="partner">
+        <div class="container">
+            <div class="title">
+                <h1>Our Partners</h1>
+            </div>
+            <div class="content">
+                <div class="item">
+                    <img src="image/partner1.png" alt="">
+                </div>
+                <div class="item">
+                    <img src="image/partner2.png" alt="">
+                </div>
+                <div class="item">
+                    <img src="image/partner3.png" alt="">
+                </div>
+                <div class="item">
+                    <img src="image/partner4.png" alt="">
                 </div>
             </div>
         </div>
+    </div>
 
-        <div class="blog">
-            <div class="container">
-                <div class="blogContent">
-                    <h2>Focused on safety, wherever you go
-                    </h2>
-                    <div class="bc">
-                        <div class="item">
-                            <img src="image/item1.jpg" alt="">
-                            <div class="itemContent">
-                                <h3>Our commitment to your safety
-                                </h3>
-                                <p>With every safety feature and every standard in our Community Guidelines, we're committed to helping to create a safe environment for our users.
-                                </p>
-                                <div class="itemLink">
-                                    <a href="">Read about our Community Guidelines</a>
-                                    <a href="">See all safety features</a>
-                                </div>                               
-                            </div>
-                        </div>
-                        <div class="item">
-                            <img src="image/item2.jpg" alt="">
-                            <div class="itemContent">
-                                <h3>Setting 10,000+ cities in motion
-                                </h3>
-                                <p>The app is available in thousands of cities worldwide, so you can request a ride even when you’re far from home.
-                                </p>
-                                <div class="itemLink">
-                                    <a href="">View all cities
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </div>
-
+    <div class="news">
+        <div class="container">
+            <div class="title">
+                <h1>News</h1>
+                <div class="line"></div>
+            </div>
+            <h2>News, events and insights for you</h2>
+            <div class="content">
+                <div class="item">
+                    <ul>
+                        <li><a href="">Dataset’s 2021 Internship Program</a></li>
+                        <li><a href="">Crowdsourcing vs. Managed Teams</a></li>
+                        <li id="primaryNew"><a href="">COVID19’S NEWS UPDATE</a></li>
+                        <li><a href="">The 3 Risks of Crowdsourcing</a></li>
+                        <li><a href="">COVID-19 Situation reports in Viet Nam</a></li>
+                    </ul>
+                </div>
+                <div class="img">
+                    <img src="image/new.png" alt="">
                 </div>
             </div>
         </div>
+    </div>
 
-        <div class="contact">
-            <div class="container">
-                <div class="contactContent">
-                    <div class="ctc">
-                        <div class="item">
-                            <img src="image/contact1.svg" alt="">
-                            <div class="itemContent">
-                                <h3>About us
-                                </h3>
-                                <p>Find out how we started, what drives us, and how we’re igniting opportunity.
-                                </p>
-                                <div class="itemLink">
-                                    <a href="">Learn more
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="item">
-                            <img src="image/contact2.svg" alt="">
-                            <div class="itemContent">
-                                <h3>Newsroom
-                                </h3>
-                                <p>See announcements about our latest releases, initiatives, and partnerships.
-                                </p>
-                                <div class="itemLink">
-                                    <a href="">Learn more
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="item">
-                            <img src="image/contact3.svg" alt="">
-                            <div class="itemContent">
-                                <h3>Global citizenship
-                                </h3>
-                                <p>Read about our commitment to making a positive impact in the cities we serve.
-                                </p>
-                                <div class="itemLink">
-                                    <a href="">Learn more
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+    <div class="careers">
+        <div class="container">
+            <div class="title">
+                <h1>Careers</h1>
+                <a href="">See more<i class="fas fa-chevron-right"></i>
+                </a>
+            </div>
+            <div class="content">
+                <div id="primaryCareer">
+                    <img src="image/career1.png" alt="">
+                    <div class="text">
+                        <h2>Dataset’s 2021 Summer Internship Program</h2>
+                        <p>Dataset is seeking highly qualified people for the position of AI/ML Engineer and AI/ML
+                            Researcher. The team pursues research & development in the areas... </p>
+                        <a href="">See more</a>
                     </div>
+                </div>
+                <div class="item">
+                    <img src="image/career2.png" alt="">
+                    <h3>Department of Business Development and Partnerships</h3>
+                </div>
+                <div class="item">
+                    <img src="image/career3.png" alt="">
+                    <h3>Department of Product Development</h3>
+                </div>
+                <div class="item">
+                    <img src="image/career4.png" alt="">
+                    <h3>Department of Crowdsourcing</h3>
+                </div>
+                <div class="item">
+                    <img src="image/career5.png" alt="">
+                    <h3>Internship</h3>
                 </div>
             </div>
         </div>
+    </div>
 
-        <div class="download">
-            <div class="container">
-                <div class="downloadContent">
-                    <h2>There’s more to love in the apps
-                    </h2>
-                    <div class="downloadItem">
-                        <a href="">
-                            <img src="image/download1.png" alt="">
-                            <h3>Download the Driver app </h3>
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
 
-                        <a href="">
-                            <img src="image/download2.png" alt="">
-                            <h3>Download the Uber app</h3>
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
-            
-                    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="lfooter">
+                <img src="image/logo.jpg" alt="">
+                <p>We have brought organizations closer to our stakeholders, laying the groundwork for new ways of
+                    collaborating and creating value together like never before.</p>
+                <div class="ficon">
+                    <a href=""><i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href=""><i class="fab fa-linkedin"></i>
+                    </a>
                 </div>
+            </div>
+            <div class="rfooter">
+                <ul>
+                    <li>Company</li>
+                    <li><a href="">About us</a></li>
+                    <li><a href="">Products & Services</a></li>
+                    <li><a href="">News</a></li>
+                    <li><a href="">Careers</a></li>
+                </ul>
+                <ul>
+                    <li>Support</li>
+                    <li><a href="">FAQs</a></li>
+                    <li><a href="">Privacy Policy</a></li>
+                    <li><a href="">Help</a></li>
+                </ul>
+                <ul>
+                    <li>Contact Us</li>
+                    <li><a href="">E.  info@dataset.vn</a></li>
+                    <li><a href="">A.  Floor 3, Golden Land Bulding, <br>
+                        275 Nguyen Trai, Thanh Xuan, Hanoi</a></li>
+                    <li><a href="">P.  (+84) 0984420826</a></li>
+                </ul>
             </div>
         </div>
+    </footer>
 
-        <div class="register">
-            <div class="container">
-                <div class="registerContent">
-                    <div class="reItem">
-                        <a href="">
-                            <h2>Sign up to drive</h2>
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                    <div class="reItem">
-                        <a href="">
-                            <h2>Sign up to drive</h2>
-                            <i class="fas fa-arrow-right"></i>                            
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <footer class="footer">
-            <div class="container">
-                <div class="footerContent">
-                    <div class="first">
-                        <div>
-                            <a href="">Uber</a>
-                            <div></div>
-                            <a href="">Visit Help Center</a>
-                        </div>
-                        <div>
-                            <span>Do not sell my info (California)</span>
-                        </div>
-                    </div>
-
-                    <div class="footerList">
-                        <ul>
-                            <li>Company</li>
-                            <li><a href="">About us</a></li>
-                            <li><a href="">Our offerings</a></li>
-                            <li><a href="">Newsroom</a></li>
-                            <li><a href="">Investors</a></li>
-                            <li><a href="">Blog</a></li>
-                            <li><a href="">Careers</a></li>
-                            <li><a href="">AI</a></li>
-                            <li><a href="">Gift cards</a></li>
-                        </ul>
-                        <ul>
-                            <li>Products</li>
-                            <li><a href="">Ride</a></li>
-                            <li><a href="">Drive</a></li>
-                            <li><a href="">Deliver</a></li>
-                            <li><a href="">Eat</a></li>
-                            <li><a href="">Uber for business</a></li>
-                            <li><a href="">Uber Freight</a></li>
-                        </ul>
-                        <ul>
-                            <li>Global citizenship</li>
-                            <li><a href="">Safety</a></li>
-                            <li><a href="">Diversity and Inclusion</a></li>
-                        </ul>
-                        <ul>
-                            <li>Travel</li>
-                            <li><a href="">Airports</a></li>
-                        </ul>
-                    </div>
-                    <div class="social">
-                        <div class="socialIcon">
-                            <i class="fab fa-facebook-square"></i>
-                            <i class="fab fa-twitter"></i>
-                            <i class="fab fa-youtube"></i>
-                            <i class="fab fa-linkedin"></i>
-                            <i class="fab fa-instagram"></i>
-                        </div>
-                        <div class="language">
-                            <a href=""><i class="fas fa-globe-americas"></i> English (International)</a>
-                            <a href=""><i class="fas fa-map-marker-alt"></i> Macau</a>
-                        </div>
-                        <div class="socialImg">
-                            <a href="">
-                                <img src="image/google.svg" alt="">
-                            </a>
-                            <a href="">
-                                <img src="image/app.svg" alt="">
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="privacy">
-                        <div>
-                            © 2021 Uber Technologies Inc.
-                        </div>
-                        <div>
-                            <ul>
-                                <li><a href="">Privacy</a></li>
-                                <li><a href="">Accessibility</a></li>
-                                <li><a href="">Terms</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-
-    </main>
     <script src="js/main.js"></script>
 </body>
 
