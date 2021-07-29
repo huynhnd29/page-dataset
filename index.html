@@ -8,10 +8,28 @@
     <title>Dataset</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"> </script>
+    <script>
+        $(document).ready(function () {
+  
+            // Add smooth scrolling to all links
+            $("a").on('click', function (event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+                    var hash = this.hash;
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 500, function () {
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+        });
+    </script>
 </head>
 
 <body>
-
+    
     <header class="header">
         <div class="container">
             <div class="logo">
@@ -19,7 +37,7 @@
             </div>
             <div class="menu">
                 <ul>
-                    <li><a href="#about">About us</a></li>
+                    <li><a href="#about" >About us</a></li>
                     <li><a href="#product">Products & Service</a></li>
                     <li><a href="#news">News</a></li>
                     <li><a href="#careers">Careers</a></li>
@@ -279,7 +297,7 @@
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="js/main.js"></scri>
 </body>
 
 </html>
