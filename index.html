@@ -1,304 +1,516 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dataset</title>
-    <link rel="icon" href="https://tool.dataset.vn/static/images/logodataset.a7ba250bb516.svg" />
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"> </script>
+    <link
+      rel="icon"
+      href="https://tool.dataset.vn/static/images/logodataset.a7ba250bb516.svg"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
-        $(document).ready(function () {
-  
-            // Add smooth scrolling to all links
-            $("a").on('click', function (event) {
-                if (this.hash !== "") {
-                    event.preventDefault();
-                    var hash = this.hash;
-                    $('html, body').animate({
-                        scrollTop: $(hash).offset().top
-                    }, 500, function () {
-                        window.location.hash = hash;
-                    });
-                } // End if
-            });
-        });
-    </script>
-</head>
+      $("#carouselExampleIndicators").carousel({
+        interval: 2000,
+        cycle: true,
+      });
 
-<body>
-    
+      $(document).on("click", 'a[href^="#"]', function (e) {
+        // target element id
+        var id = $(this).attr("href");
+
+        // target element
+        var $id = $(id);
+        if ($id.length === 0) {
+          return;
+        }
+
+        // prevent standard hash navigation (avoid blinking in IE)
+        e.preventDefault();
+
+        // top position relative to the document
+        var pos = $id.offset().top;
+
+        // animated top scrolling
+        $("body, html").animate({ scrollTop: pos });
+      });
+      $(function () {
+        function isScrolledIntoView($elem) {
+          var docViewTop = $(window).scrollTop();
+          var docViewBottom = docViewTop + $(window).height();
+          var elemTop = $elem.offset().top;
+          var elemBottom = elemTop + $elem.height();
+          return elemBottom <= docViewBottom && elemTop >= docViewTop;
+        }
+
+        function count($this) {
+          var current = parseInt($this.html(), 10);
+          if (
+            isScrolledIntoView($this) &&
+            !$this.data("isCounting") &&
+            current < $this.data("count")
+          ) {
+            $this.html(++current);
+            $this.data("isCounting", true);
+            setTimeout(function () {
+              $this.data("isCounting", false);
+              count($this);
+            }, 50);
+          }
+        }
+
+        $(".c-section4").each(function () {
+          $(this).data("count", parseInt($(this).html(), 10));
+          $(this).html("0");
+          $(this).data("isCounting", false);
+        });
+
+        function startCount() {
+          $(".c-section4").each(function () {
+            count($(this));
+          });
+        }
+
+        $(window).scroll(function () {
+          startCount();
+        });
+
+        startCount();
+      });
+
+      $("#counter-count").each(function () {
+        $(this)
+          .prop("Counter", 0)
+          .animate(
+            {
+              Counter: $(this).text(),
+            },
+            {
+              //chnage count up speed here
+              duration: 4000,
+              easing: "swing",
+              step: function (now) {
+                $(this).text(Math.ceil(now));
+              },
+            }
+          );
+      });
+    </script>
+  </head>
+
+  <body>
     <header class="header">
-        <div class="container">
-            <div class="logo">
-                <a href=""><img src="image/logo.jpg" alt=""></a>
-            </div>
-            <div class="menu">
-                <ul>
-                    <li><a href="#about" >About us</a></li>
-                    <li><a href="#product">Products & Service</a></li>
-                    <li><a href="#news">News</a></li>
-                    <li><a href="#careers">Careers</a></li>
-                </ul>
-            </div>
-            <div class="login">
-                <ul>
-                    <li><a href="https://tool.dataset.vn/user/login/">Log In</a></li>
-                    <li><a href="https://tool.dataset.vn/user/signup">Sign Up</a></li>
-                    <li><a href=""><i class="fas fa-bars"></i></a></li>
-                </ul>
-            </div>
+      <div class="container">
+        <div class="logo">
+          <a href=""><img src="image/logo.jpg" alt="" /></a>
         </div>
+        <div class="menu">
+          <ul>
+            <li><a href="#carouselExampleIndicators">About us</a></li>
+            <li><a href="#product">Services</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#careers">Careers</a></li>
+          </ul>
+        </div>
+        <div class="login">
+          <ul>
+            <li><a href="https://tool.dataset.vn/user/login/">Log In</a></li>
+            <li><a href="https://tool.dataset.vn/user/signup">Sign Up</a></li>
+            <li>
+              <a href=""><i class="fas fa-bars"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </header>
 
+    <div id="about" class="aboutUs"></div>
 
-    <div id="about" class="aboutUs">
-        <div class="container">
-            <div class="title">
-                <h1>About Us</h1>
-                <div class="line"></div>
-            </div>
-            <div class="content">
-                <h2>A Data Crowdsourcing Platform</h2>
-                <p>Dataset is a data crowdsourcing platform that powered by new technologies, social media and web 2.0.
-                    Dataset have brought organizations closer to their stakeholders, laying the groundwork for new ways
-                    of collaborating and creating value together like never before.</p>
-            </div>
+    <div
+      id="carouselExampleIndicators"
+      class="carousel slide"
+      data-ride="carousel"
+      data-interval="2000"
+    >
+      <ol class="carousel-indicators">
+        <li
+          data-target="#carouselExampleIndicators"
+          data-slide-to="0"
+          class="active"
+        ></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            class="d-block w-100"
+            src="image/slider1.png"
+            alt="First slide"
+          />
+          <div class="carousel-caption d-none d-md-block first">
+            <h2>Spread facts, not fear</h2>
+            <p>
+              New cases of COVID-19 are increasing rapidly at astonishing rates
+              globally. Dataset has started to help in processing the data into
+              the spread and control of this virus.
+            </p>
+            <button>READ OUR STORY</button>
+          </div>
         </div>
-    </div>
-
-
-    <div class="slider">
-        <div class="content">
-            <h2>Speard facts, not fear </h2>
-            <p>New cases of COVID-19 are increasing rapidly at astonishing rates globally. Dataset has started to help
-                in processing the data into the spread and control of this virus.</p>
-            <a href="">READ OUR STORY</a>
+        <div class="carousel-item">
+          <img
+            class="d-block w-100"
+            src="image/slider2.png"
+            alt="Second slide"
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h2>A Data Crowdsourcing Platform</h2>
+            <p>Struggling with data ground-truth?</p>
+            <p>
+              Let Dataset launch your data challenge to our network of more than
+              7000 workers and receive proposed solutions quickly and
+              effectively for all types of data processing services.
+            </p>
+          </div>
         </div>
-        <img src="image/slider.jpg" alt="">
+      </div>
+      <a
+        class="carousel-control-prev"
+        href="#carouselExampleIndicators"
+        role="button"
+        data-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a
+        class="carousel-control-next"
+        href="#carouselExampleIndicators"
+        role="button"
+        data-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
     </div>
-
 
     <div id="product" class="product">
-        <div class="container">
-            <div class="title">
-                <h1>Products and Services</h1>
-                <div class="line"></div>
-            </div>
-
-            <div class="content">
-                <div class="item">
-                    <div class="img">
-                        <img src="image/product1.png" alt="">
-                        <a href="">
-                            <div class="icon"><i class="fas fa-chevron-right"></i></div>
-                        </a>
-                    </div>
-                    <p>Data Synthesis</p>
-                </div>
-                <div class="item">
-                    <div class="square"></div>
-                    <div class="text">
-                        <h2>Data Labeling</h2>
-                        <p>Identifying raw data and adding informative labels to provide context so that a machine
-                            learning model can learn from it.</p>
-                    </div>
-                    <a href="">
-                        <div class="icon">
-                            Check avaibility
-                            <i class="fas fa-chevron-right"></i>
-                        </div>
-                    </a>
-                </div>
-                <div class="item">
-                    <div class="img">
-                        <img src="image/product3.png" alt="">
-                        <a href="">
-                            <div class="icon">
-                                <i class="fas fa-chevron-right"></i>
-                            </div>
-                        </a>
-                    </div>
-                    <p>Content Moderation</p>
-                </div>
-            </div>
-
+      <div class="container">
+        <div class="title">
+          <h1>Services</h1>
         </div>
+
+        <div class="content">
+          <div class="item">
+            <div class="img">
+              <img src="image/serviecNew1.png" alt="" />
+            </div>
+            <div class="textItem">
+              <p>Data Collection & Creation</p>
+              <a
+                >We provide several different data collection solutions to best
+                suit your specific needs. In-field and crowdsourced data
+                collection for speech, image, video, and survey data.</a
+              >
+            </div>
+          </div>
+          <div class="item">
+            <div class="img">
+              <img src="image/serviecNew2.png" alt="" />
+            </div>
+            <div class="textItem">
+              <p>Data Collection & Creation</p>
+
+              <a
+                >Label objects in images and videos for Computer Vision, Natural
+                Language Processing, Audio/Voice Processing, Time Series, Video
+                Processing and more.
+              </a>
+            </div>
+          </div>
+          <div class="item">
+            <div class="img">
+              <img src="image/serviecNew3.png" alt="" />
+            </div>
+            <div class="textItem">
+              <p>Data Collection & Creation</p>
+              <a
+                >Make sure that contents are placed in the right category, are
+                free from scams, don't include any illegal items, and much
+                more.</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="whyUs">
-        <div class="container">
-            <div class="ourService">
-                <div class="item">
-                    <img src="image/service1.png" alt="">
-                    <div class="text">
-                        <p>500+</p>
-                        <span class='descript'>Active user</span>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="image/service2.png" alt="">
-                    <div class="text">
-                        <p class='numn'>1000+</p>
-                        <span class='descript'>Members in our  crowdsourcing community</span>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="image/service3.png" alt="">
-                    <div class="text">
-                        <p>4+</p>
-                        <span class='descript'>Strategic partners</span>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="image/service4.png" alt="">
-                    <div class="text">
-                        <p>10+</p>
-                        <span class='descript'> Loyal Clients</span>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="ourService">
+          <div class="item">
+            <img src="image/service1.png" alt="" />
+            <div class="text">
+              <p id="counter-count">500</p>
+              <span class="descript">Active user</span>
             </div>
-            <div class="content">
-                <div class="title">
-                    <h3>Why Dataset</h3>
-                    <div class="line"></div>
-                </div>
-                <div class="text">
-                    <h2>Access to a relatively inexpensive and scalable workforce
-                    </h2>
-                    <p>By engaging a group of crowd workers, you can distribute hundreds of thousands of machine
-                        learning microtasks quickly and cost-effectively. </p>
-                </div>
+          </div>
+          <div class="item">
+            <img src="image/service2.png" alt="" />
+            <div class="text members">
+              <p class="numn">1000+</p>
+              <span class="descript"
+                >Members in our crowdsourcing community</span
+              >
             </div>
+          </div>
+          <div class="item">
+            <img src="image/service3.png" alt="" />
+            <div class="text">
+              <p>4+</p>
+              <span class="descript">Strategic partners</span>
+            </div>
+          </div>
+          <div class="item">
+            <img src="image/service4.png" alt="" />
+            <div class="text">
+              <p>10+</p>
+              <span class="descript"> Loyal Clients</span>
+            </div>
+          </div>
         </div>
+        <div class="content">
+          <div class="title">
+            <h3>Why Dataset ----</h3>
+            <div class="line"></div>
+          </div>
+          <div class="text">
+            <h2>Access to a relatively inexpensive and scalable workforce</h2>
+            <p>
+              Our 7000 + qualified workers are ready to collect the data you
+              need.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div   class="partner">
-        <div class="container">
-            <div class="title">
-                <h1>Our Partners</h1>
-            </div>
-            <div class="content">
-                <div class="item">
-                    <img src="image/partner1.png" alt="">
-                </div>
-                <div class="item">
-                    <img src="image/partner2.png" alt="">
-                </div>
-                <div class="item">
-                    <img src="image/partner3.png" alt="">
-                </div>
-                <div class="item">
-                    <img src="image/partner4.png" alt="">
-                </div>
-            </div>
+    <div class="partner">
+      <div class="container">
+        <div class="title">
+          <h1>Trusted by</h1>
         </div>
+        <div class="content">
+          <div class="item">
+            <img src="image/partner1.png" alt="" />
+          </div>
+          <div class="item">
+            <img src="image/partner2.png" alt="" />
+          </div>
+          <div class="item">
+            <img src="image/partner3.png" alt="" />
+          </div>
+          <div class="item">
+            <img src="image/partner4.png" alt="" />
+          </div>
+        </div>
+        <div class="contentUnder">
+          <div class="item">
+            <img src="image/ORM.png" alt="" />
+          </div>
+          <div class="item">
+            <img src="image/unicef.png" alt="" />
+          </div>
+          <div class="item">
+            <img src="image/Infore.png" alt="" />
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div id='news' class="news">
-        <div class="container">
-            <div class="title">
-                <h1>News</h1>
-                <div class="line"></div>
-            </div>
-            <h2>News, events and insights for you</h2>
-            <div class="content">
-                <div class="item">
-                    <ul>
-                        <li><a href="">Dataset’s 2021 Internship Program</a></li>
-                        <li><a href="">Crowdsourcing vs. Managed Teams</a></li>
-                        <li id="primaryNew"><a href="">COVID19’S NEWS UPDATE</a></li>
-                        <li><a href="">The 3 Risks of Crowdsourcing</a></li>
-                        <li><a href="">COVID-19 Situation reports in Viet Nam</a></li>
-                    </ul>
-                </div>
-                <div class="img">
-                    <img src="image/new.png" alt="">
-                </div>
-            </div>
+    <div id="news" class="news">
+      <div class="container">
+        <div class="title">
+          <h1>News</h1>
+          <div class="line"></div>
         </div>
+        <h2>News, events and insights for you</h2>
+        <div class="content">
+          <div class="img2">
+            <img src="image/sliderIndicator.png" alt="" />
+          </div>
+          <div class="item">
+            <ul>
+              <li><a href="">Dataset’s 2021 Internship Program</a></li>
+              <li><a href="">Crowdsourcing vs. Managed Teams</a></li>
+              <li id="primaryNew"><a href="">COVID19’S NEWS UPDATE</a></li>
+              <ul class="update">
+                <li>
+                  <a
+                    >New cases of COVID-19 are increasing rapidly at astonishing
+                    rates globally. Dataset has started to help in processing
+                    the data into the spread and control of this virus.....</a
+                  >See more
+                </li>
+              </ul>
+              <li><a href="">COVID-19 Situation reports in Viet Nam</a></li>
+            </ul>
+          </div>
+          <div class="img">
+            <img src="image/new.png" alt="" />
+          </div>
+        </div>
+      </div>
     </div>
 
     <div id="careers" class="careers">
-        <div class="container">
-            <div class="title">
-                <h1>Careers</h1>
-                <a href="">See more<i class="fas fa-chevron-right"></i>
-                </a>
-            </div>
-            <div class="content">
-                <div id="primaryCareer">
-                    <img src="image/career1.png" alt="">
-                    <div class="text">
-                        <h2>Dataset’s 2021 Summer Internship Program</h2>
-                        <p>Dataset is seeking highly qualified people for the position of AI/ML Engineer and AI/ML
-                            Researcher. The team pursues research & development in the areas... </p>
-                        <a href="">See more</a>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="image/career2.png" alt="">
-                    <h3>Department of Business Development and Partnerships</h3>
-                </div>
-                <div class="item">
-                    <img src="image/career3.png" alt="">
-                    <h3>Department of Product Development</h3>
-                </div>
-                <div class="item">
-                    <img src="image/career4.png" alt="">
-                    <h3>Department of Crowdsourcing</h3>
-                </div>
-                <div class="item">
-                    <img src="image/career5.png" alt="">
-                    <h3>Internship</h3>
-                </div>
-            </div>
+      <div class="container">
+        <div class="title">
+          <h1>Careers</h1>
+          <a href="">See more<i class="fas fa-chevron-right"></i> </a>
         </div>
+        <div class="content">
+          <div id="primaryCareer">
+            <img src="image/career1.png" alt="" />
+            <div class="text">
+              <h3>Dataset’s 2021 Summer Internship Program</h3>
+              <p>
+                Dataset is seeking highly qualified people for the position of
+                AI/ML Engineer and AI/ML Researcher. The team pursues research &
+                development in the areas...
+              </p>
+              <a href="">See more</a>
+            </div>
+          </div>
+          <div class="item">
+            <img src="image/career2.png" alt="" />
+            <h4>Department of Business Development and Partnerships</h4>
+          </div>
+          <div class="item">
+            <img src="image/career3.png" alt="" />
+            <h4>Department of Product Development</h4>
+          </div>
+          <div class="item">
+            <img src="image/career4.png" alt="" />
+            <h4>Department of Crowdsourcing</h4>
+          </div>
+          <div class="item">
+            <img src="image/career5.png" alt="" />
+            <h4>Internship</h4>
+          </div>
+        </div>
+      </div>
     </div>
 
+    <div class="contactContainer">
+      <div id="contact" class="contact">
+        <div class="leftContact">
+          <div class="title">
+            <h1>Contact Sales</h1>
+          </div>
+          <div>
+            <h3>Struggling with data ground truth?</h3>
+            <p>
+              Let Dataset launch your challenge to our network of more than 7000
+              workers and receive proposed solutions quickly and effectively for
+              all types of data processing services.
+            </p>
+          </div>
+        </div>
+        <form class="form">
+          <div class="view">
+            <input type="text" value="" placeholder="Your Name" />
+            <input type="text" value="" placeholder="Conpany Name" />
+            <input type="text" value="" placeholder="Email Address" />
+            <textarea
+              type="text"
+              value=""
+              placeholder="Please explain your request in detail."
+              rows="4"
+              cols="50"
+            ></textarea>
+            <div>
+              <input name="box" id="box" type="checkbox" />
+              <label for="box">I agree to the Privacy Policy</label>
+            </div>
+            <button>SEND</button>
+          </div>
+        </form>
+      </div>
+    </div>
 
     <footer class="footer">
-        <div class="container">
-            <div class="lfooter">
-                <img src="image/logo.jpg" alt="">
-                <p>We have brought organizations closer to our stakeholders, laying the groundwork for new ways of
-                    collaborating and creating value together like never before.</p>
-                <div class="ficon">
-                    <a href="https://www.facebook.com/dataset.vn"><i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href=""><i class="fab fa-linkedin"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="rfooter">
-                <ul>
-                    <li>Company</li>
-                    <li><a href="">About us</a></li>
-                    <li><a href="">Products & Services</a></li>
-                    <li><a href="">News</a></li>
-                    <li><a href="">Careers</a></li>
-                </ul>
-                <ul>
-                    <li>Support</li>
-                    <li><a href="">FAQs</a></li>
-                    <li><a href="">Privacy Policy</a></li>
-                    <li><a href="">Help</a></li>
-                </ul>
-                <ul>
-                    <li>Contact Us</li>
-                    <li><a href="">E. info@dataset.vn</a></li>
-                    <li><a href="">A. Floor 3, Golden Land Bulding, <br>
-                            275 Nguyen Trai, Thanh Xuan, Hanoi</a></li>
-                    <li><a href="">P. (+84) 0984420826</a></li>
-                </ul>
-            </div>
+      <div class="container">
+        <div class="lfooter">
+          <img src="image/logo.jpg" alt="" />
+          <p>
+            We have brought organizations closer to our stakeholders, laying the
+            groundwork for new ways of collaborating and creating value together
+            like never before.
+          </p>
+          <div class="ficon">
+            <a href="https://www.facebook.com/dataset.vn"
+              ><i class="fab fa-facebook-f"></i>
+            </a>
+            <a href=""><i class="fab fa-linkedin"></i> </a>
+          </div>
         </div>
+        <div class="rfooter">
+          <ul>
+            <li>Company</li>
+            <li><a href="">About us</a></li>
+            <li><a href="">Products & Services</a></li>
+            <li><a href="">News</a></li>
+            <li><a href="">Careers</a></li>
+          </ul>
+          <ul>
+            <li>Support</li>
+            <li><a href="">FAQs</a></li>
+            <li><a href="">Privacy Policy</a></li>
+            <li><a href="">Help</a></li>
+          </ul>
+          <ul>
+            <li>Contact Us</li>
+            <li><a href="">E. info@dataset.vn</a></li>
+            <li>
+              <a href=""
+                >A. Floor 3, Golden Land Bulding, <br />
+                275 Nguyen Trai, Thanh Xuan, Hanoi</a
+              >
+            </li>
+            <li><a href="">P. (+84) 0984420826</a></li>
+          </ul>
+        </div>
+      </div>
     </footer>
 
-    <script src="js/main.js"></scri>
-</body>
-
+    <script src="js/main.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
