@@ -80,7 +80,7 @@ const ContactSalesWapper = styled.header`
 `;
 export const ContactSales = () => {
   return (
-    <ContactSalesWapper>
+    <ContactSalesWapper id="contact">
       <div
         style={{    
           backgroundImage:`url(${contactbackGround})`,

@@ -76,9 +76,9 @@ export const Header = () => {
             Careers
           </Link>
         </div>
-        <div className="header_signup">
-          <a  href="https://tool.dataset.vn/user/signup">Contact Sales</a>
-        </div>
+        <Link className="header_signup" to="contact" smooth={true} duration={500} offset={-200}>
+          <a>Contact Sales</a>
+        </Link>
       </div>
     </HeaderWapper>
   );
