@@ -9,18 +9,17 @@ const BannerWapper = styled.header`
   background-image: black;
   margin-top: 85px;
   .header-img {
-    /* height: 300px; */
   }
   .header-carousel {
-    height: 0;
+    height: 100px;
     img {
       width: 100%;
-      height: auto;
+      min-height: 450px !important;
     }
   }
   .title-banner-slider1 {
-    margin-left: 15%;
-    margin-top: 3em;
+    margin-left: 14%;
+    margin-top: 2em;
     width: 350px;
     height: 378px;
     text-align: start;

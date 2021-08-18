@@ -10,18 +10,18 @@ import partner7 from "../image/Infore.png";
 const TrustByWapper = styled.header`
   margin-top: 4em;
   padding: 0 10em;
-  h1{
-    color: #6E6A6B;
+  h1 {
+    color: #6e6a6b;
   }
-  img{
-    width: unset;
-    height: unset;
+  img {
+    width: 100%;
+    height: 100%;
   }
   .trusted-top {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around;
-      margin-top: 3em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 3em;
   }
 `;
 export const TrustedBby = () => {
@@ -29,15 +29,29 @@ export const TrustedBby = () => {
     <TrustByWapper>
       <h1>Trusted by</h1>
       <div className="trusted-top">
-        <img src={partner1} alt="" />
-        <img src={partner2} alt="" />
-        <img src={partner3} alt="" />
-        <img src={partner4} alt="" />
+        <div>
+          <img src={partner1} alt="" />
+        </div>
+        <div>
+          <img src={partner2} alt="" />
+        </div>
+        <div>
+          <img src={partner3} alt="" />
+        </div>
+        <div>
+          <img src={partner4} alt="" />
+        </div>
       </div>
-      <div className="trusted-top" >
-        <img src={partner6} alt="" />
-        <img src={partner5} alt="" />
-        <img src={partner7} alt="" />
+      <div className="trusted-top">
+        <div>
+          <img src={partner6} alt="" />
+        </div>
+        <div>
+          <img src={partner5} alt="" />
+        </div>
+        <div>
+          <img src={partner7} alt="" />
+        </div>
       </div>
     </TrustByWapper>
   );

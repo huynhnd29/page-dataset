@@ -13,12 +13,15 @@ const ServiceWapper = styled.header`
     div {
       display: flex;
       flex-direction: column;
-      margin: 0 2em;
+      width: 500px;
+      margin: 0 1em;
       padding-bottom: 1em;
       box-shadow: 2px 2px 4px #ecf0f1;
       border-radius: 10px;
       img {
         border-radius: 10px;
+        width: 100%;
+        height: auto;
       }
       a {
         text-align: start;

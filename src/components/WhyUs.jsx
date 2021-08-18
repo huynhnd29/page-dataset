@@ -12,10 +12,15 @@ const WhyUsWapper = styled.header`
   background-color: #f8f8f8;
   height: 470px;
   div {
+    img{
+        width: 60px;
+        height: 60px;
+      }
     flex: 5;
     .whyus-top {
       display: flex;
       margin: 7em 2em;
+      height: 60px;
       div {
         display: flex;
         .whyus-service {
@@ -51,6 +56,7 @@ const WhyUsWapper = styled.header`
       padding-top: 2em;
       padding-left: 2em;
       padding-right: 2em;
+      
       span {
         margin-top: 1.5em;
         color: white;

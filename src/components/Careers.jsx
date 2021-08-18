@@ -9,20 +9,26 @@ import career5 from "../image/career5.png";
 const CareersWapper = styled.header`
   margin-top: 4em;
   padding: 0 10em;
-  background-color: #f8f8f8;
+  /* background-color: #f8f8f8; */
+  h1{
+    padding-top: 2em;
+  }
   .careers-top {
     display: flex;
+    justify-content:space-between;
     .careers-top-left {
+      flex: 6;
       margin: 1em 1em;
       border-radius: 10px;
       display: grid;
      grid-template-columns: repeat(2, 1fr);
      gap: 30px;
-     margin-right:3em;
+     /* margin-right:3em; */
+     padding-right: 3em;
      cursor: pointer;
       img {
-        width: 350px;
-        height: 320px;
+        width: 100%;
+        height: auto;
         border-radius: 10px;
       }
       div {
@@ -40,12 +46,17 @@ const CareersWapper = styled.header`
       }
     }
     .careers-top-right {
-      height: 320px;
+      flex: 3;
       border-radius: 10px;
-      margin: 1em 1em;
+      margin-top: 1em;
+      margin-left: 1em;
+      margin-bottom: 1em;
       cursor: pointer;
+      margin-right: 1em;
       img {
         border-radius: 10px;
+        width: 100%;
+        height: auto;
       }
       div {
         display: flex;
@@ -58,26 +69,28 @@ const CareersWapper = styled.header`
       }
     }
     .careers-top-right:hover {
-      box-shadow: 2px 2px 4px #ecf0f1;
+      box-shadow: 3px 3px 8px 8px #ecf0f1;
       background-color: white;
     }
     .careers-top-left:hover  {
-      box-shadow: 2px 2px 4px #ecf0f1;
+      box-shadow: 3px 3px 8px 8px #ecf0f1;
       background-color: white;
     }
   }
   .careers-bottom {
-    display: grid;
-     grid-template-columns: repeat(3, 1fr);
-     gap: 30px;
+    display: flex;
+    justify-content:space-between;
     }
     .careers-bottom-right {
+      flex: 3;
       cursor: pointer;
-      height: 320px;
+      /* height: 320px; */
       border-radius: 10px;
       margin: 1em 1em;
       img {
         border-radius: 10px;
+        width: 100%;
+        height: auto;
       }
       div {
         display: flex;
@@ -91,14 +104,14 @@ const CareersWapper = styled.header`
     }
     .careers-bottom-right:hover {
       background-color: white;
-      box-shadow: 2px 2px 4px #ecf0f1;
+      box-shadow: 3px 3px 8px 8px #ecf0f1;
         
     }
   }
 `;
 export const Careers = () => {
   return (
-    <CareersWapper id='Careers'>
+    <CareersWapper id="Careers">
       <h1>Careers</h1>
       <div className="careers-top">
         <div className="careers-top-left">

@@ -1,14 +1,25 @@
 import React from "react";
 import styled from "styled-components";
 import logoImg from "../image/logo.jpg";
+import falink from "../image/falink.png";
+import lnIcon from "../image/lnIcon.png";
+import fbIcon from "../image/fbIcon.png";
 
 const FooterComponentWapper = styled.header`
   margin-top: 4em;
   text-align: start;
   padding: 0em 10em;
-  color: #6A6A6A;
+  color: #6a6a6a;
+  margin-bottom: 4em;
   img {
     max-width: 180px;
+  }
+  p {
+    margin-left: 12px;
+    margin-bottom: 2em;
+  }
+  .icon{
+    margin-right: 1em;
   }
   .container {
     display: grid;
@@ -17,15 +28,15 @@ const FooterComponentWapper = styled.header`
       width: 75%;
     }
     .rfooter {
-        margin-left: -6em;
+      margin-left: -6em;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 30px;
       ul {
         list-style-type: none;
         padding-top: 30px;
-        li:first-child{
-            margin-bottom: 2em;
+        li:first-child {
+          margin-bottom: 2em;
         }
         li {
           margin-bottom: 10px;
@@ -42,16 +53,16 @@ export const FooterComponent = () => {
           <div class="lfooter">
             <img src={logoImg} alt="" />
             <p>
-              We have brought organizations closer to our stakeholders, laying
-              the groundwork for new ways of collaborating and creating value
-              together like never before.
+              Let Dataset launch your challenge to our network of more than 7000
+              workers and receive proposed solutions quickly and effectively for
+              all types of data processing services.
             </p>
             <div class="ficon">
-              <a href="https://www.facebook.com/dataset.vn">
-                <i class="fab fa-facebook-f"></i>
+              <a className="icon" href="https://www.facebook.com/dataset.vn">
+                <img src={fbIcon} alt="" />
               </a>
-              <a href="https://www.facebook.com/dataset.vn">
-                <i class="fab fa-linkedin"></i>{" "}
+              <a href="https://www.linkedin.com/company/dataset-vn/about/">
+                <img src={lnIcon} alt="" />
               </a>
             </div>
           </div>
@@ -62,7 +73,7 @@ export const FooterComponent = () => {
                 <a>About us</a>
               </li>
               <li>
-                <a >Products & Services</a>
+                <a>Services</a>
               </li>
               <li>
                 <a>News</a>
@@ -90,8 +101,8 @@ export const FooterComponent = () => {
               </li>
               <li>
                 <a>
-                  A. Floor 3, Golden Land Bulding,
-                  275 Nguyen Trai, Thanh Xuan, Hanoi
+                  A. Floor 3, Golden Land Bulding, 275 Nguyen Trai, Thanh Xuan,
+                  Hanoi
                 </a>
               </li>
               <li>

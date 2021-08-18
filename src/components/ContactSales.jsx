@@ -5,12 +5,14 @@ const ContactSalesWapper = styled.header`
   margin-top: 4em;
   padding: 3em 10em;
   background-color: #f8f4f4;
+  align-items: center !important;
   div {
     display: flex;
     padding: 2em 1em;
     /* box-shadow: 0px 3px #e2e2e2; */
     max-width: 1180px;
     border-radius: 28px;
+
     .ContactSale-left {
       flex: 5;
       text-align: start;
@@ -76,7 +78,6 @@ const ContactSalesWapper = styled.header`
     }
   }
 `;
-console.log("mmmmmmmmmmmmmmmmmmmmmmm",process.env.PUBLIC_URL);
 export const ContactSales = () => {
   return (
     <ContactSalesWapper>

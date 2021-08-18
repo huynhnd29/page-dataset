@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import logoImg from "../image/logo.jpg";
+import logoImg from "../image/logo.png";
 import slider1 from "../image/slider1.png";
 import { Link } from "react-scroll";
 const HeaderWapper = styled.header`
@@ -36,6 +36,8 @@ const HeaderWapper = styled.header`
     .header_signup {
       padding: 0.7em 1em;
       background-color: black;
+      border-radius: 10px;
+      margin-left: 2em;
       a {
         color: white;
         text-decoration: none;
@@ -44,7 +46,7 @@ const HeaderWapper = styled.header`
   }
   img {
     width: 8em;
-    height: 4em;
+    height: 8em;
   }
 `;
 export const Header = () => {
@@ -74,11 +76,8 @@ export const Header = () => {
             Careers
           </Link>
         </div>
-        <div className="header_login">
-          <a  href="https://tool.dataset.vn/user/login/">Login</a>
-        </div>
         <div className="header_signup">
-          <a  href="https://tool.dataset.vn/user/signup">Sign Up</a>
+          <a  href="https://tool.dataset.vn/user/signup">Contact Sales</a>
         </div>
       </div>
     </HeaderWapper>
