@@ -5,7 +5,8 @@ const ContactSalesWapper = styled.header`
   margin-top: 4em;
   padding: 3em 10em;
   background-color: #f8f4f4;
-  align-items: center !important;
+  display: flex;
+  justify-content: center !important;
   div {
     display: flex;
     padding: 2em 1em;

@@ -7,6 +7,11 @@ import sliderIndicator4 from "../image/sliderIndicator4.png";
 import sliderIndicator from "../image/sliderIndicator.png";
 
 import newImg from "../image/new.png";
+import newImg1 from "../image/new1.png";
+import newImg2 from "../image/new2.png";
+import newImg3 from "../image/new3.png";
+import newImg4 from "../image/new4.png";
+
 const NewsWapper = styled.header`
   margin-top: 4em;
   padding: 0 10em;
@@ -28,8 +33,9 @@ const NewsWapper = styled.header`
     img {
       border-radius: 10px;
       margin-bottom: 4em;
-      width:100%;
-      height: 90%;
+      width:90%;
+      height: 80%;
+      /* max-height: 600px; */
     }
   }
   .news-left {
@@ -82,17 +88,22 @@ export const News = () => {
   const string3 = 'Tháng 6/2021, số ca nhiễm COVID-19 mới tại Việt Nam đạt mức kỷ lục 400-500 ca mỗi ngày, và có nguy cơ bùng phát diện rộng ở một số tỉnh thành. Cả nước đang gồng hết sức để chống dịch, và một trong những hình ảnh thường thấy nhất là các y bác sĩ mặc đồ bảo hộ kín mít, giữa trời nắng 40 độ, để lấy mẫu xét nghiệm cho hàng ngàn người. Liệu có cách nào để thực hiện việc này hiệu quả hơn?....See more'
   const string4 ='In Viet Nam, from 3 January 2020 to 6:47pm CEST, 13 August 2021, there have been 246.568 confirmed cases of COVID-19 with 4.813 deaths, reported to WHO. As of 5 August 2021, a total of 8.061.116 vaccine doses have been administered.....See more'
   const [num, setNum] = useState(0);
+  const [newShow,setNewShow]=useState(newImg4)
   const setNumBer = (num2) => {
     if (num2 !== num) {
       setNum(num2);
       if (num2 === 1) {
         setImgShow(sliderIndicator1);
+        setNewShow(newImg1)
       } else if (num2 === 2) {
         setImgShow(sliderIndicator2);
+        setNewShow(newImg2)
       } else if (num2 === 3) {
         setImgShow(sliderIndicator3);
+        setNewShow(newImg3)
       } else if (num2 === 4) {
         setImgShow(sliderIndicator4);
+        setNewShow(newImg4)
       }
     } else {
       setNum(0);
@@ -128,7 +139,7 @@ export const News = () => {
           </div>
         </div>
         <div>
-          <img src={newImg} />
+          <img src={newShow} />
         </div>
       </div>
     </NewsWapper>
