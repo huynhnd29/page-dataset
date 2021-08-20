@@ -14,7 +14,7 @@ const BannerWapper = styled.header`
     height: 100px;
     img {
       width: 100%;
-      min-height: 450px !important;
+      /* min-height: 450px !important; */
     }
   }
   .title-banner-slider1 {
@@ -31,6 +31,7 @@ const BannerWapper = styled.header`
       text-align: left;
       font-size: 18px;
     }
+   
     h2 {
       font-weight: bold;
       font-size: 40px;
@@ -45,19 +46,23 @@ const BannerWapper = styled.header`
     }
   }
   .title-banner-slider2 {
-    padding-left: 10em;
-    padding-top: 5em;
-    width: 600px;
+    padding-left: 5em;
+    padding-top: 3em;
+    width: 50%;
     text-align: start;
     p {
-      padding-top: 1em;
       color: white;
       text-align: left;
-      font-size: 18px;
+      font-size: 25px;
+    }
+    span{
+      color: white;
+      text-align: left;
+      font-size: 25px;
     }
     h2 {
       font-weight: bold;
-      font-size: 30px;
+      font-size: 50px;
       color: white;
     }
   }
@@ -86,6 +91,7 @@ export const Banner = () => {
             }}
           >
             <h2>Spread facts, not fear</h2>
+            
             <p>
               New cases of COVID-19 are increasing rapidly at astonishing rates
               globally. Dataset has started to help in processing the data into
@@ -106,8 +112,9 @@ export const Banner = () => {
             }}
           >
             <h2>A Data Crowdsourcing Platform</h2>
+            <span>Struggling with data ground-truth?</span>
             <p>
-              Struggling with data ground-truth?Let Dataset launch your data
+              Let Dataset launch your data
               challenge to our network of more than 7000 workers and receive
               proposed solutions quickly and effectively for all types of data
               processing services.

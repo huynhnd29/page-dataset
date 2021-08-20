@@ -16,7 +16,7 @@ const ServiceWapper = styled.header`
       width: 500px;
       margin: 0 1em;
       padding-bottom: 1em;
-      box-shadow: 2px 2px 4px #ecf0f1;
+      box-shadow: 4px 4px 8px 8px #d8e0e2;
       border-radius: 10px;
       img {
         border-radius: 10px;

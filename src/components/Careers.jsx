@@ -23,7 +23,7 @@ const CareersWapper = styled.header`
       display: grid;
      grid-template-columns: repeat(2, 1fr);
      gap: 30px;
-     /* margin-right:3em; */
+     align-items: center;
      padding-right: 3em;
      cursor: pointer;
       img {

@@ -57,6 +57,7 @@ const ContactSalesWapper = styled.header`
           outline: none;
           border-color: rgb(224, 224, 224);
           font-size: 16px;
+          font-family: Arial, Helvetica, sans-serif;
         }
         button {
           padding: 0.5em;
@@ -70,9 +71,8 @@ const ContactSalesWapper = styled.header`
         div {
           display: flex;
           align-items: center;
-          label {
-            margin-top: -5px;
-          }
+          justify-content: center;
+          
         }
       }
     }

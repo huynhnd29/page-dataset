@@ -94,7 +94,7 @@ export const WhyUs = () => {
               <img src={service2} alt="" />
               <span className="whyus-service">
                 <div>
-                  <CountUp start={0} end={700} suffix="+" duration={2.0} />
+                  <CountUp start={0} end={7000} suffix="+" duration={2.0} />
                 </div>
                 <a>Members in our Crowdsourcing Community</a>
               </span>

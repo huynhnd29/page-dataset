@@ -14,8 +14,8 @@ const TrustByWapper = styled.header`
     color: #6e6a6b;
   }
   img {
-    width: 100%;
-    height: 100%;
+    width: unset;
+    height: unset;
   }
   .trusted-top {
     display: flex;
