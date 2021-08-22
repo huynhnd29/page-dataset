@@ -57,15 +57,16 @@ export const Header = () => {
       </a>
       <div className="right_header">
         <div>
-          <Link to="WhyUs" smooth={true} duration={500} offset={-100} >
-            About Us
-          </Link>
-        </div>
-        <div>
           <Link to="Services" smooth={true} duration={500} offset={-200}>
             Services
           </Link>
         </div>
+        <div>
+          <Link to="WhyUs" smooth={true} duration={500} offset={-100}>
+            About Us
+          </Link>
+        </div>
+
         <div>
           <Link to="News" smooth={true} duration={500} offset={-50}>
             News
@@ -76,7 +77,13 @@ export const Header = () => {
             Careers
           </Link>
         </div>
-        <Link className="header_signup" to="contact" smooth={true} duration={500} offset={-200}>
+        <Link
+          className="header_signup"
+          to="contact"
+          smooth={true}
+          duration={500}
+          offset={-200}
+        >
           <a>Contact Sales</a>
         </Link>
       </div>
