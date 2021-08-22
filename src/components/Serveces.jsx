@@ -4,7 +4,7 @@ import serviecNew1 from "../image/serviecNew1.png";
 import serviecNew2 from "../image/serviecNew2.png";
 import serviecNew3 from "../image/serviecNew3.png";
 const ServiceWapper = styled.header`
-  margin-top: 550px;
+  margin-top: 480px;
   padding: 0 10em;
   .body-services {
     width: 100%;
