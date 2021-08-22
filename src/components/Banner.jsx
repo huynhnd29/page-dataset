@@ -14,10 +14,11 @@ const BannerWapper = styled.header`
     width: 100%;
     background-color: #000;
     .header-slider2 {
-      width: 656.74px;
-      height: 336.87px;
-      margin-top: 2em;
+      width: 580px;
+      height: 310px;
+      margin-top: 3em;
       margin-left: 50vw !important;
+      margin-right: 1em;
     }
   }
   .header-carousel {
