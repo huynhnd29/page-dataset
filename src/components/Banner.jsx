@@ -14,7 +14,7 @@ const BannerWapper = styled.header`
     height: 100px;
     img {
       width: 100%;
-      /* min-height: 450px !important; */
+      min-height: 450px !important;
     }
   }
   .title-banner-slider1 {
@@ -50,19 +50,20 @@ const BannerWapper = styled.header`
     padding-top: 3em;
     width: 50%;
     text-align: start;
+    background-color: #000;
     p {
       color: white;
       text-align: left;
-      font-size: 25px;
+      font-size: 20px;
     }
     span{
       color: white;
       text-align: left;
-      font-size: 25px;
+      font-size: 20px;
     }
     h2 {
       font-weight: bold;
-      font-size: 50px;
+      font-size: 45px;
       color: white;
     }
   }
@@ -78,6 +79,7 @@ export const Banner = () => {
         emulateTouch={true}
         showStatus={false}
         showThumbs={false}
+        centerSlidePercentage={30}
       >
         <div>
           <img className="header-img" src={slider1} alt="Hotel Argentina" />
