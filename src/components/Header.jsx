@@ -3,6 +3,7 @@ import styled from "styled-components";
 import logoImg from "../image/logo.png";
 import slider1 from "../image/slider1.png";
 import { Link } from "react-scroll";
+import i18n from "../i18n";
 const HeaderWapper = styled.header`
   display: flex;
   flex-direction: row;
@@ -49,32 +50,49 @@ const HeaderWapper = styled.header`
     height: 8em;
   }
 `;
-export const Header = () => {
+export const Header = ({ aboutUsFunction }) => {
   return (
     <HeaderWapper>
-      <a href="">
+      <a>
         <img src={logoImg} alt="" />
       </a>
       <div className="right_header">
+        <button
+          onClick={() => {
+            console.log("change langue", i18n.languages[0]);
+            if (i18n.languages[0] == "en") {
+              i18n.changeLanguage("vi");
+            }else{
+              i18n.changeLanguage("en");
+            }
+          }}
+        >
+          change langue
+        </button>
+        <div>
+          <Link
+            to="banner"
+            smooth={true}
+            duration={500}
+            offset={-100}
+            onClick={aboutUsFunction}
+          >
+            {i18n.t("Header.about_us")}
+          </Link>
+        </div>
         <div>
           <Link to="Services" smooth={true} duration={500} offset={-200}>
-            Services
+          {i18n.t("Header.service")}
           </Link>
         </div>
-        <div>
-          <Link to="WhyUs" smooth={true} duration={500} offset={-100}>
-            About Us
-          </Link>
-        </div>
-
         <div>
           <Link to="News" smooth={true} duration={500} offset={-50}>
-            News
+          {i18n.t("Header.news")}
           </Link>
         </div>
         <div>
           <Link to="Careers" smooth={true} duration={500} offset={-100}>
-            Careers
+          {i18n.t("Header.careers")}
           </Link>
         </div>
         <Link
@@ -84,7 +102,7 @@ export const Header = () => {
           duration={500}
           offset={-200}
         >
-          <a>Contact Sales</a>
+          <a>{i18n.t("Header.contact_sales")}</a>
         </Link>
       </div>
     </HeaderWapper>

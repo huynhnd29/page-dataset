@@ -7,6 +7,7 @@ const ContactSalesWapper = styled.header`
   background-color: #f8f4f4;
   display: flex;
   justify-content: center !important;
+  height: 600px;
   div {
     display: flex;
     padding: 2em 1em;
@@ -39,7 +40,7 @@ const ContactSalesWapper = styled.header`
         margin-left: 20px;
         margin-right: 30px;
         background-color: #ffffff;
-        padding: 1em ;
+        padding: 1em;
         border-radius: 10px;
         box-shadow: 2px 2px 4px 4px #d8e0e2;
         input {
@@ -68,12 +69,12 @@ const ContactSalesWapper = styled.header`
           outline: none;
           background-color: rgb(0, 0, 0);
           color: #ecf0f1;
+          margin-top: 5em;
         }
         div {
           display: flex;
           align-items: center;
           justify-content: center;
-          
         }
       }
     }
@@ -83,9 +84,9 @@ export const ContactSales = () => {
   return (
     <ContactSalesWapper id="contact">
       <div
-        style={{    
-          backgroundImage:`url(${contactbackGround})`,
-          boxShadow: "0px 3px #e2e2e2"
+        style={{
+          backgroundImage: `url(${contactbackGround})`,
+          boxShadow: "0px 3px #e2e2e2",
         }}
       >
         <div className="ContactSale-left">
@@ -109,10 +110,7 @@ export const ContactSales = () => {
               rows="4"
               cols="50"
             ></textarea>
-            <div>
-              <input name="box" id="box" type="checkbox" />
-              <label for="box">I agree to the Privacy Policy</label>
-            </div>
+
             <button>SEND</button>
           </div>
         </form>

@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import i18n from "../i18n";
 import serviecNew1 from "../image/serviecNew1.png";
 import serviecNew2 from "../image/serviecNew2.png";
 import serviecNew3 from "../image/serviecNew3.png";
@@ -39,11 +40,7 @@ export const Serveces = () => {
         <div>
           <img src={serviecNew1} alt="Hotel Chile" />
           <h3>Data Collection & Creation</h3>
-          <a>
-            We provide several different data collection solutions to best suit
-            your specific needs. In-field and crowdsourced data collection for
-            speech, image, video, and survey data.
-          </a>
+          <a>{i18n.t("Service.we_provide_several")}</a>
         </div>
         <div>
           <img src={serviecNew3} alt="Hotel Chile" />

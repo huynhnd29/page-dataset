@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useRef } from "react";
 import styled from "styled-components";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import slider1 from "../image/slider1.png";
 import slider2 from "../image/slider2.png";
 import slider3 from "../image/slider3.png";
+import i18n from "../i18n";
 
 const BannerWapper = styled.header`
   background-image: black;
@@ -77,11 +78,19 @@ const BannerWapper = styled.header`
       color: white;
     }
   }
+  button {
+    margin-top: 500px;
+  }
 `;
-export const Banner = () => {
+
+export const Banner = ({ ref, setIndex }) => {
+  function handleChange(selectedIndex) {
+    setIndex(selectedIndex);
+  }
   return (
-    <BannerWapper>
+    <BannerWapper id="banner">
       <Carousel
+        ref={ref}
         className="header-carousel"
         autoPlay={true}
         infiniteLoop={true}
@@ -90,6 +99,7 @@ export const Banner = () => {
         showStatus={false}
         showThumbs={false}
         centerSlidePercentage={30}
+        onChange={handleChange}
       >
         <div>
           <img className="header-img" src={slider1} alt="Hotel Argentina" />
@@ -103,7 +113,7 @@ export const Banner = () => {
               left: 0,
             }}
           >
-            <h2>Spread facts, not fear</h2>
+            <h2>{i18n.t("Banner.Spread_facts_not_fear")}</h2>
 
             <p>
               New cases of COVID-19 are increasing rapidly at astonishing rates
