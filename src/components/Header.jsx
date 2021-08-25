@@ -39,7 +39,7 @@ const HeaderWapper = styled.header`
       }
     }
     .header_signup {
-      padding: 0.6em 2.4em;
+      padding: 0.7em 2.5em;
       background-color: black;
       border-radius: 10px;
       margin-left: 2em;
