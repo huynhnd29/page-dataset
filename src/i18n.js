@@ -9,7 +9,7 @@ const Language = {
 };
 
 i18n.init({
-  fallbackLng: Language.VN,
+  fallbackLng: Language.EN,
   initImmediate: false,
   returnObjects: true,
   interpolation: {

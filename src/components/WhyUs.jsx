@@ -5,6 +5,7 @@ import service2 from "../image/service2.png";
 import service3 from "../image/service3.png";
 import service4 from "../image/service4.png";
 import CountUp from "react-countup";
+import i18n from "../i18n";
 const WhyUsWapper = styled.header`
   display: flex;
   margin-top: 4em;
@@ -84,10 +85,10 @@ export const WhyUs = () => {
             <div>
               <img src={service1} alt="" />
               <div className="whyus-service">
-              <div>
+                <div>
                   <CountUp start={0} end={500} suffix="+" duration={2.0} />
                 </div>
-                <a>Daily Active Users</a>
+                <a>{i18n.t("WhyUs.daily_active_users")}</a>
               </div>
             </div>
             <div>
@@ -96,7 +97,7 @@ export const WhyUs = () => {
                 <div>
                   <CountUp start={0} end={7000} suffix="+" duration={2.0} />
                 </div>
-                <a>Members in our Crowdsourcing Community</a>
+                <a>{i18n.t("WhyUs.members_crowdsourcing_community")}</a>
               </span>
             </div>
           </div>
@@ -110,7 +111,7 @@ export const WhyUs = () => {
                 <div>
                   <CountUp start={0} end={11} suffix="+" duration={2.0} />
                 </div>
-                <a>Strategic partners</a>
+                <a>{i18n.t("WhyUs.strategic_partners")}</a>
               </div>
             </div>
             <div>
@@ -119,7 +120,7 @@ export const WhyUs = () => {
                 <div>
                   <CountUp start={0} end={15} suffix="+" duration={2.0} />
                 </div>
-                <a>Loyal Clients</a>
+                <a>{i18n.t("WhyUs.loyal_clients")}</a>
               </div>
             </div>
           </div>
@@ -127,11 +128,9 @@ export const WhyUs = () => {
       </div>
       <div>
         <div className="whyus-right">
-          <span>Why Dataset ----------</span>
-          <h2>Access to a relatively inexpensive and scalable workforce</h2>
-          <a>
-            Our 7000 + qualified workers are ready to collect the data you need.{" "}
-          </a>
+          <span>{i18n.t("WhyUs.why_dataset")} ----------</span>
+          <h2>{i18n.t("WhyUs.access_relatively")}</h2>
+          <a>{i18n.t("WhyUs.qualified_workers")} </a>
         </div>
       </div>
     </WhyUsWapper>

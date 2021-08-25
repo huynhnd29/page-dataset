@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import i18n from "../i18n";
 import contactbackGround from "../image/contactbackGround.png";
 const ContactSalesWapper = styled.header`
   margin-top: 4em;
@@ -90,28 +91,25 @@ export const ContactSales = () => {
         }}
       >
         <div className="ContactSale-left">
-          <h1>Contact Sales</h1>
-          <p>Struggling with data ground truth?</p>
-          <a>
-            Let Dataset launch your challenge to our network of more than 7000
-            workers and receive proposed solutions quickly and effectively for
-            all types of data processing services.
+          <h1>{i18n.t("ContactSales.contact_sales")}</h1>
+          <p>{i18n.t("ContactSales.struggling_data_ground_truth")}</p>
+          <a>{i18n.t("ContactSales.let_dataset")}
           </a>
         </div>
         <form class="form">
           <div class="view">
-            <input type="text" value="" placeholder="Your Name" />
-            <input type="text" value="" placeholder="Conpany Name" />
-            <input type="text" value="" placeholder="Email Address" />
+            <input type="text" value="" placeholder={i18n.t("ContactSales.your_name")} />
+            <input type="text" value="" placeholder={i18n.t("ContactSales.company_name")} />
+            <input type="text" value="" placeholder={i18n.t("ContactSales.email_address")} />
             <textarea
               type="text"
               value=""
-              placeholder="Please explain your request in detail."
+              placeholder={i18n.t("ContactSales.explain_your_request")}
               rows="4"
               cols="50"
             ></textarea>
 
-            <button>SEND</button>
+            <button>{i18n.t("ContactSales.send")}</button>
           </div>
         </form>
       </div>

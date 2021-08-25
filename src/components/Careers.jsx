@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import i18n from "../i18n";
 import career1 from "../image/career1.png";
 import career2 from "../image/career2.png";
 import career3 from "../image/career3.png";
@@ -85,6 +86,7 @@ const CareersWapper = styled.header`
       flex: 3;
       cursor: pointer;
       /* height: 320px; */
+      justify-content: center;
       border-radius: 10px;
       margin: 1em 1em;
       img {
@@ -95,7 +97,7 @@ const CareersWapper = styled.header`
       div {
         display: flex;
         flex-direction: column;
-        text-align: start;
+        /* text-align: start; */
         padding: 1em 1.5em;
         a {
           font-size: 22px;
@@ -112,24 +114,22 @@ const CareersWapper = styled.header`
 export const Careers = () => {
   return (
     <CareersWapper id="Careers">
-      <h1>Careers</h1>
+      <h1>{i18n.t("Careers.careers")}</h1>
       <div className="careers-top">
         <div className="careers-top-left">
           <img src={career1} alt="" />
           <div>
-            <h3>Dataset’s 2021 Summer Internship Program</h3>
+            <h3>{i18n.t("Careers.dataset_summer_internship_program")}</h3>
             <a>
-              Dataset is seeking highly qualified people for the position of
-              AI/ML Engineer and AI/ML Researcher. The team pursues research &
-              development in the areas... See more
+            {i18n.t("Careers.dataset_seeking")}
             </a>
           </div>
         </div>
         <div className="careers-top-right">
           <img src={career2} alt="" />
           <div>
-            <a>Department of Business</a>
-            <a>Development and Partnerships</a>
+            <a>{i18n.t("Careers.department_business")}</a>
+            <a>{i18n.t("Careers.development_partnerships")}</a>
           </div>
         </div>
       </div>
@@ -138,20 +138,19 @@ export const Careers = () => {
         <div className="careers-bottom-right">
           <img src={career3} alt="" />
           <div>
-            <a>Department of Product</a>
-            <a>Development</a>
+            <a>{i18n.t("Careers.department_product")}</a>
           </div>
         </div>
         <div className="careers-bottom-right">
           <img src={career4} alt="" />
           <div>
-            <a>Department of Crowdsourcing</a>
+            <a>{i18n.t("Careers.department_crowdsourcing")}</a>
           </div>
         </div>
         <div className="careers-bottom-right">
           <img src={career5} alt="" />
           <div style={{ alignItems: "center" }}>
-            <a>Internship</a>
+            <a>{i18n.t("Careers.internship")}</a>
           </div>
         </div>
       </div>

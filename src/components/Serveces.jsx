@@ -35,29 +35,22 @@ const ServiceWapper = styled.header`
 export const Serveces = () => {
   return (
     <ServiceWapper id="Services">
-      <h1>Services</h1>
+      <h1>{i18n.t("Service.service")}</h1>
       <div className="body-services">
         <div>
           <img src={serviecNew1} alt="Hotel Chile" />
-          <h3>Data Collection & Creation</h3>
+          <h3>{i18n.t("Service.data_collection_creation")}</h3>
           <a>{i18n.t("Service.we_provide_several")}</a>
         </div>
         <div>
           <img src={serviecNew3} alt="Hotel Chile" />
-          <h3>Data Labeling</h3>
-          <a>
-            Label objects in images and videos for Computer Vision, Natural
-            Language Processing, Audio/Voice Processing, Time Series, Video
-            Processing and more.
-          </a>
+          <h3>{i18n.t("Service.data_labeling")}</h3>
+          <a>{i18n.t("Service.label_objects_in_images")}</a>
         </div>
         <div>
           <img src={serviecNew2} alt="Hotel Chile" />
-          <h3>Content Moderation</h3>
-          <a>
-            Make sure that contents are placed in the right category, are free
-            from scams, don't include any illegal items, and much more.
-          </a>
+          <h3>{i18n.t("Service.content_moderation")}</h3>
+          <a>{i18n.t("Service.make_sure_that_contents")}</a>
         </div>
       </div>
     </ServiceWapper>

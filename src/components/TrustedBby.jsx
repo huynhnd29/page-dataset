@@ -7,6 +7,7 @@ import partner4 from "../image/partner4.png";
 import partner5 from "../image/unicef.png";
 import partner6 from "../image/ORM.png";
 import partner7 from "../image/Infore.png";
+import i18n from "../i18n";
 const TrustByWapper = styled.header`
   margin-top: 4em;
   padding: 0 10em;
@@ -27,7 +28,7 @@ const TrustByWapper = styled.header`
 export const TrustedBby = () => {
   return (
     <TrustByWapper>
-      <h1>Trusted by</h1>
+      <h1>{i18n.t("TrustedBy.trusted_by")}</h1>
       <div className="trusted-top">
         <div>
           <img src={partner1} alt="" />

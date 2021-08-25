@@ -11,6 +11,7 @@ import newImg1 from "../image/new1.png";
 import newImg2 from "../image/new2.png";
 import newImg3 from "../image/new3.png";
 import newImg4 from "../image/new4.png";
+import i18n from "../i18n";
 
 const NewsWapper = styled.header`
   margin-top: 4em;
@@ -79,14 +80,11 @@ const NewsWapper = styled.header`
   }
 `;
 export const News = () => {
-  const string =
-    "Vào thứ 7 vừa rồi, DATASET chào đón 22 thực tập sinh đầu tiên của năm đến từ trường Đại học Thủy Lợi. Các bạn đều là những bạn trẻ rất năng động, vui tính và ham học hỏi.....See more";
-  const string2 =
-    'Một trong những câu hỏi thường gặp của nhân sự Dataset khi giới thiệu với mọi người xung quanh về công việc đang làm tại công ty chính là "Dán Nhãn Dữ Liệu Là Làm Gì". Nhưng kể từ hôm nay mỗi khi được hỏi, thay vì đưa ra những câu trả lời dài đầy tính chuyên môn, các bạn có thể đơn giản tag ngay người bạn của mình vào post này nhé!....See more';
-  const string3 =
-    "Tháng 6/2021, số ca nhiễm COVID-19 mới tại Việt Nam đạt mức kỷ lục 400-500 ca mỗi ngày, và có nguy cơ bùng phát diện rộng ở một số tỉnh thành. Cả nước đang gồng hết sức để chống dịch, và một trong những hình ảnh thường thấy nhất là các y bác sĩ mặc đồ bảo hộ kín mít, giữa trời nắng 40 độ, để lấy mẫu xét nghiệm cho hàng ngàn người. Liệu có cách nào để thực hiện việc này hiệu quả hơn?....See more";
-  const string4 =
-    "In Viet Nam, from 3 January 2020 to 6:47pm CEST, 13 August 2021, there have been 246.568 confirmed cases of COVID-19 with 4.813 deaths, reported to WHO. As of 5 August 2021, a total of 8.061.116 vaccine doses have been administered.....See more";
+  const string = i18n.t("News.dataset_internship_program_description");
+
+  const string2 = i18n.t("News.what_data_labeling_description");
+  const string3 = i18n.t("News.COVID19_innovation_challenges_description");
+  const string4 = i18n.t("News.COVID19_news_update_description");
   const [num, setNum] = useState(0);
   const [newShow, setNewShow] = useState(newImg4);
   const setNumBer = (num2) => {
@@ -114,33 +112,67 @@ export const News = () => {
 
   return (
     <NewsWapper id="News">
-      <h1>News</h1>
-      <span>News, events and insights for you</span>
+      <h1>{i18n.t("News.news")}</h1>
+      <span>{i18n.t("News.news_events_insights")}</span>
       <div>
         <div className="news-left">
           <img src={imgShow} />
           <div>
             <div>
               <p onClick={() => setNumBer(1)}>
-                Dataset’s 2021 Internship Program
+                {i18n.t("News.dataset_internship_program")}
               </p>
               {num === 1 ? (
-                <a  target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/dataset.vn/posts/441735040596717/">
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://www.facebook.com/dataset.vn/posts/441735040596717/"
+                >
                   {string}
                 </a>
               ) : null}
             </div>
             <div>
-              <p onClick={() => setNumBer(2)}>What is data labeling?</p>
-              {num === 2 ? <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/dataset.vn/posts/410424937061061/">{string2}</a> : null}
+              <p onClick={() => setNumBer(2)}>
+                {i18n.t("News.what_data_labeling")}
+              </p>
+              {num === 2 ? (
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://www.facebook.com/dataset.vn/posts/410424937061061/"
+                >
+                  {string2}
+                </a>
+              ) : null}
             </div>
             <div>
-              <p onClick={() => setNumBer(3)}>COVID19 Innovation Challenges</p>
-              {num === 3 ? <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/dataset.vn/posts/442449677191920/">{string3}</a> : null}
+              <p onClick={() => setNumBer(3)}>
+                {i18n.t("News.COVID19_innovation_challenges")}
+              </p>
+              {num === 3 ? (
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://www.facebook.com/dataset.vn/posts/442449677191920/"
+                >
+                  {string3}
+                </a>
+              ) : null}
             </div>
             <div>
-              <p onClick={() => setNumBer(4)}>COVID19’S NEWS UPDATE</p>
-              {num === 4 ? <a target="_blank" rel="noopener noreferrer" href="https://ncov.moh.gov.vn/">{string4}</a> : null}
+              <p onClick={() => setNumBer(4)}>
+                {i18n.t("News.COVID19_news_update")}
+              </p>
+              {num === 4 ? (
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://ncov.moh.gov.vn/"
+                >
+                  {string4}
+                </a>
+              ) : null}
             </div>
           </div>
         </div>
