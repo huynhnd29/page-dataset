@@ -2,8 +2,12 @@ import React from "react";
 import styled from "styled-components";
 import logoImg from "../image/logo.png";
 import slider1 from "../image/slider1.png";
+import vietnam from "../image/vietnam.png";
+import unitedStates from "../image/unitedStates.png";
+
 import { Link } from "react-scroll";
-import i18n from "../i18n";
+import i18n, { Language } from "../i18n";
+import { useState } from "react/cjs/react.development";
 const HeaderWapper = styled.header`
   display: flex;
   flex-direction: row;
@@ -35,7 +39,7 @@ const HeaderWapper = styled.header`
       }
     }
     .header_signup {
-      padding: 0.7em 1em;
+      padding: 0.6em 2.4em;
       background-color: black;
       border-radius: 10px;
       margin-left: 2em;
@@ -49,6 +53,17 @@ const HeaderWapper = styled.header`
     width: 8em;
     height: 8em;
   }
+  button {
+    background-color: transparent;
+    border: none;
+    border: 0;
+    margin-left: 3em;
+    cursor: pointer;
+    img {
+      width: 35px;
+      height: 35px;
+    }
+  }
 `;
 export const Header = ({ aboutUsFunction }) => {
   return (
@@ -57,18 +72,6 @@ export const Header = ({ aboutUsFunction }) => {
         <img src={logoImg} alt="" />
       </a>
       <div className="right_header">
-        <button
-          onClick={() => {
-            console.log("change langue", i18n.languages[0]);
-            if (i18n.languages[0] == "en") {
-              i18n.changeLanguage("vi");
-            }else{
-              i18n.changeLanguage("en");
-            }
-          }}
-        >
-          change langue
-        </button>
         <div>
           <Link
             to="banner"
@@ -82,17 +85,17 @@ export const Header = ({ aboutUsFunction }) => {
         </div>
         <div>
           <Link to="Services" smooth={true} duration={500} offset={-200}>
-          {i18n.t("Header.service")}
+            {i18n.t("Header.service")}
           </Link>
         </div>
         <div>
           <Link to="News" smooth={true} duration={500} offset={-50}>
-          {i18n.t("Header.news")}
+            {i18n.t("Header.news")}
           </Link>
         </div>
         <div>
           <Link to="Careers" smooth={true} duration={500} offset={-100}>
-          {i18n.t("Header.careers")}
+            {i18n.t("Header.careers")}
           </Link>
         </div>
         <Link
@@ -104,6 +107,24 @@ export const Header = ({ aboutUsFunction }) => {
         >
           <a>{i18n.t("Header.contact_sales")}</a>
         </Link>
+        <button
+          onClick={() => {
+            console.log("change langue", i18n.languages[0]);
+            if (i18n.languages[0] == Language.EN) {
+              i18n.changeLanguage(Language.VN);
+            } else {
+              i18n.changeLanguage(Language.EN);
+            }
+            
+          }}
+        >
+          <img
+            src={i18n.languages[0] === "vi" ? unitedStates : vietnam}
+            width="90"
+            height="50"
+            alt="submit"
+          />
+        </button>
       </div>
     </HeaderWapper>
   );
