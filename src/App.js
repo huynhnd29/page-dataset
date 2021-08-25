@@ -1,23 +1,6 @@
-import logo from "./logo.svg";
 import "./App.css";
-import serviecNew1 from "./image/serviecNew1.png";
-import serviecNew2 from "./image/serviecNew2.png";
-import serviecNew3 from "./image/serviecNew3.png";
 
-import service1 from "./image/service1.png";
-import service2 from "./image/service2.png";
-import service3 from "./image/service3.png";
-import service4 from "./image/service4.png";
-
-import newImg from "./image/new.png";
-import career1 from "./image/career1.png";
-import career2 from "./image/career2.png";
-import career3 from "./image/career3.png";
-import career4 from "./image/career4.png";
-import career5 from "./image/career5.png";
-import logoImg from "./image/logo.jpg";
 import { Header } from "./components/Header";
-import { Banner } from "./components/Banner";
 import { Serveces } from "./components/Serveces";
 import { WhyUs } from "./components/WhyUs";
 import { TrustedBby } from "./components/TrustedBby";
@@ -29,7 +12,6 @@ import { useRef, useState } from "react";
 import styled from "styled-components";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import slider1 from "./image/slider1.png";
-import slider2 from "./image/slider2.png";
 import slider3 from "./image/slider3.png";
 import { Carousel } from "react-responsive-carousel";
 import i18n from "./i18n";
@@ -151,9 +133,7 @@ function App() {
             >
               <h2>{i18n.t("Banner.Spread_facts_not_fear")}</h2>
 
-              <p>
-              {i18n.t("Banner.Spread_facts_not_fear_description")}
-              </p>
+              <p>{i18n.t("Banner.Spread_facts_not_fear_description")}</p>
               <button>{i18n.t("Banner.read_our_story")}</button>
             </div>
           </div>
@@ -176,9 +156,7 @@ function App() {
             >
               <h2>{i18n.t("Banner.crowdsourcing_platform")}</h2>
               <span>Struggling with data ground-truth?</span>
-              <p>
-              {i18n.t("Banner.let_dataset_launch")}
-              </p>
+              <p>{i18n.t("Banner.let_dataset_launch")}</p>
             </div>
           </div>
         </Carousel>

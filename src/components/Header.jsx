@@ -66,6 +66,15 @@ const HeaderWapper = styled.header`
   }
 `;
 export const Header = ({ aboutUsFunction }) => {
+  const changLangueLandingpage = async () => {
+    console.log("change langue", i18n.languages[0]);
+    if (i18n.languages[0] == Language.EN) {
+      i18n.changeLanguage(Language.VN);
+    } else {
+      i18n.changeLanguage(Language.EN);
+    }
+    window.location.reload();
+  };
   return (
     <HeaderWapper>
       <a>
@@ -107,17 +116,7 @@ export const Header = ({ aboutUsFunction }) => {
         >
           <a>{i18n.t("Header.contact_sales")}</a>
         </Link>
-        <button
-          onClick={() => {
-            console.log("change langue", i18n.languages[0]);
-            if (i18n.languages[0] == Language.EN) {
-              i18n.changeLanguage(Language.VN);
-            } else {
-              i18n.changeLanguage(Language.EN);
-            }
-            
-          }}
-        >
+        <button onClick={changLangueLandingpage}>
           <img
             src={i18n.languages[0] === "vi" ? unitedStates : vietnam}
             width="90"
