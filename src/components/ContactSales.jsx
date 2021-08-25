@@ -52,6 +52,7 @@ const ContactSalesWapper = styled.header`
           border-color: rgb(224, 224, 224);
           border-width: 0.1px;
           font-size: 16px;
+          border: 1px solid #ccc
         }
         textarea {
           padding: 1em;
