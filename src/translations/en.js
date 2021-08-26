@@ -17,7 +17,7 @@ export default {
       "Let Dataset launch your data challenge to our network of more than 7000 workers and receive proposed solutions quickly and effectively for all types of data processing services.",
   },
   Service: {
-    service: "Services",
+    services: "Services",
     we_provide_several:
       "We provide several different data collection solutions to best suit your specific needs. In-field and crowdsourced data collection for speech, image, video, and survey data.",
     label_objects_in_images:

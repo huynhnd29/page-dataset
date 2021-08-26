@@ -35,7 +35,7 @@ const ServiceWapper = styled.header`
 export const Serveces = () => {
   return (
     <ServiceWapper id="Services">
-      <h1>{i18n.t("Service.service")}</h1>
+      <h1>{i18n.t("Service.services")}</h1>
       <div className="body-services">
         <div>
           <img src={serviecNew1} alt="Hotel Chile" />

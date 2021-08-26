@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react/cjs/react.development";
 import styled from "styled-components";
 import i18n from "../i18n";
 import contactbackGround from "../image/contactbackGround.png";
@@ -52,7 +53,7 @@ const ContactSalesWapper = styled.header`
           border-color: rgb(224, 224, 224);
           border-width: 0.1px;
           font-size: 16px;
-          border: 1px solid #ccc
+          border: 1px solid #ccc;
         }
         textarea {
           padding: 1em;
@@ -83,6 +84,35 @@ const ContactSalesWapper = styled.header`
   }
 `;
 export const ContactSales = () => {
+  const [name, setName] = useState("");
+  const [companyName, setCompanyName] = useState("");
+  const [emailAddress, setEmailAdress] = useState("");
+  const [request, setRequest] = useState("");
+
+  const submitContactSales = async () => {
+    const response = await fetch(
+      "https://us5.list-manage.com/contact-form/post?u=4a243de9d1f78a967090e5a3c&form_id=fcee6952ed984ebcfbc99617a5aad119",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          fields: {
+            1350: emailAddress,
+            1354: companyName,
+            1358: request,
+          },
+          subscribe: "false",
+        }),
+      }
+    );
+
+    const jsonData = await response.json();
+    console.log(jsonData);
+
+
+  };
   return (
     <ContactSalesWapper id="contact">
       <div
@@ -94,23 +124,40 @@ export const ContactSales = () => {
         <div className="ContactSale-left">
           <h1>{i18n.t("ContactSales.contact_sales")}</h1>
           <p>{i18n.t("ContactSales.struggling_data_ground_truth")}</p>
-          <a>{i18n.t("ContactSales.let_dataset")}
-          </a>
+          <a>{i18n.t("ContactSales.let_dataset")}</a>
         </div>
         <form class="form">
           <div class="view">
-            <input type="text" value="" placeholder={i18n.t("ContactSales.your_name")} />
-            <input type="text" value="" placeholder={i18n.t("ContactSales.company_name")} />
-            <input type="text" value="" placeholder={i18n.t("ContactSales.email_address")} />
+            <input
+              type="text"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              placeholder={i18n.t("ContactSales.your_name")}
+            />
+            <input
+              type="text"
+              value={companyName}
+              onChange={(e) => setCompanyName(e.target.value)}
+              placeholder={i18n.t("ContactSales.company_name")}
+            />
+            <input
+              type="text"
+              value={emailAddress}
+              onChange={(e) => setEmailAdress(e.target.value)}
+              placeholder={i18n.t("ContactSales.email_address")}
+            />
             <textarea
               type="text"
-              value=""
+              value={request}
+              onChange={(e) => setRequest(e.target.value)}
               placeholder={i18n.t("ContactSales.explain_your_request")}
               rows="4"
               cols="50"
             ></textarea>
 
-            <button>{i18n.t("ContactSales.send")}</button>
+            <button onClick={submitContactSales} type='button'>
+              {i18n.t("ContactSales.send")}
+            </button>
           </div>
         </form>
       </div>

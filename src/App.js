@@ -15,6 +15,7 @@ import slider1 from "./image/slider1.png";
 import slider3 from "./image/slider3.png";
 import { Carousel } from "react-responsive-carousel";
 import i18n from "./i18n";
+import { Link } from "react-scroll";
 
 const BannerWapper = styled.header`
   background-image: black;
@@ -134,7 +135,11 @@ function App() {
               <h2>{i18n.t("Banner.Spread_facts_not_fear")}</h2>
 
               <p>{i18n.t("Banner.Spread_facts_not_fear_description")}</p>
-              <button>{i18n.t("Banner.read_our_story")}</button>
+              <button>
+                <Link to="News" smooth={true} duration={500} offset={-100}>
+                  {i18n.t("Banner.read_our_story")}
+                </Link>
+              </button>
             </div>
           </div>
           <div>
@@ -155,7 +160,6 @@ function App() {
               }}
             >
               <h2>{i18n.t("Banner.crowdsourcing_platform")}</h2>
-              <span>Struggling with data ground-truth?</span>
               <p>{i18n.t("Banner.let_dataset_launch")}</p>
             </div>
           </div>

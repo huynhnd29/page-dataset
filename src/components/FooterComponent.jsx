@@ -102,7 +102,7 @@ export const FooterComponent = () => {
                 </a>
               </li>
               <li>
-                <a>P. (+84) 0984420826</a>
+                <a>P. (+84) 98 442 0826</a>
               </li>
             </ul>
           </div>

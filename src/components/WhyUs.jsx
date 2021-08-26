@@ -6,6 +6,7 @@ import service3 from "../image/service3.png";
 import service4 from "../image/service4.png";
 import CountUp from "react-countup";
 import i18n from "../i18n";
+import VisibilitySensor from "react-visibility-sensor";
 const WhyUsWapper = styled.header`
   display: flex;
   margin-top: 4em;
@@ -86,7 +87,13 @@ export const WhyUs = () => {
               <img src={service1} alt="" />
               <div className="whyus-service">
                 <div>
-                  <CountUp start={0} end={500} suffix="+" duration={2.0} />
+                <CountUp start={0} end={500} redraw={true} suffix="+" duration={1.7}>
+                    {({ countUpRef, start }) => (
+                      <VisibilitySensor onChange={start} delayedCall>
+                        <span ref={countUpRef} />
+                      </VisibilitySensor>
+                    )}
+                  </CountUp>
                 </div>
                 <a>{i18n.t("WhyUs.daily_active_users")}</a>
               </div>
@@ -95,7 +102,13 @@ export const WhyUs = () => {
               <img src={service2} alt="" />
               <span className="whyus-service">
                 <div>
-                  <CountUp start={0} end={7000} suffix="+" duration={2.0} />
+                  <CountUp start={0} end={7000} redraw={true} suffix="+" duration={1.7}>
+                    {({ countUpRef, start }) => (
+                      <VisibilitySensor onChange={start} delayedCall>
+                        <span ref={countUpRef} />
+                      </VisibilitySensor>
+                    )}
+                  </CountUp>
                 </div>
                 <a>{i18n.t("WhyUs.members_crowdsourcing_community")}</a>
               </span>
@@ -109,7 +122,13 @@ export const WhyUs = () => {
               <img src={service3} alt="" />
               <div className="whyus-service">
                 <div>
-                  <CountUp start={0} end={11} suffix="+" duration={2.0} />
+                <CountUp start={0} end={11} redraw={true} suffix="+" duration={1.7}>
+                    {({ countUpRef, start }) => (
+                      <VisibilitySensor onChange={start} delayedCall>
+                        <span ref={countUpRef} />
+                      </VisibilitySensor>
+                    )}
+                  </CountUp>
                 </div>
                 <a>{i18n.t("WhyUs.strategic_partners")}</a>
               </div>
@@ -118,7 +137,13 @@ export const WhyUs = () => {
               <img src={service4} alt="" />
               <div className="whyus-service">
                 <div>
-                  <CountUp start={0} end={15} suffix="+" duration={2.0} />
+                <CountUp start={0} end={15} redraw={true} suffix="+" duration={1.7}>
+                    {({ countUpRef, start }) => (
+                      <VisibilitySensor onChange={start} delayedCall>
+                        <span ref={countUpRef} />
+                      </VisibilitySensor>
+                    )}
+                  </CountUp>
                 </div>
                 <a>{i18n.t("WhyUs.loyal_clients")}</a>
               </div>

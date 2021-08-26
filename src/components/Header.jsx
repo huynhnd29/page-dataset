@@ -8,6 +8,7 @@ import unitedStates from "../image/unitedStates.png";
 import { Link } from "react-scroll";
 import i18n, { Language } from "../i18n";
 import { useState } from "react/cjs/react.development";
+import { useCountUp } from "react-countup";
 const HeaderWapper = styled.header`
   display: flex;
   flex-direction: row;
