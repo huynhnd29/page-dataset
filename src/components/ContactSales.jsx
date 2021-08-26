@@ -159,7 +159,7 @@ export const ContactSales = () => {
               cols="50"
             ></textarea>
 
-            <button onClick={submitContactSales}>
+            <button type="input">
               {i18n.t("ContactSales.send")}
             </button>
           </div>
