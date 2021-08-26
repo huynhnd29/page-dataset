@@ -90,26 +90,26 @@ export const ContactSales = () => {
   const [request, setRequest] = useState("");
 
   const submitContactSales = async () => {
-    const response = await fetch(
-      "https://us5.list-manage.com/contact-form/post?u=4a243de9d1f78a967090e5a3c&form_id=fcee6952ed984ebcfbc99617a5aad119",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          fields: {
-            1350: emailAddress,
-            1354: companyName,
-            1358: request,
-          },
-          subscribe: "false",
-        }),
-      }
-    );
+    // const response = await fetch(
+    //   "https://us5.list-manage.com/contact-form/post?u=4a243de9d1f78a967090e5a3c&form_id=fcee6952ed984ebcfbc99617a5aad119",
+    //   {
+    //     method: "POST",
+    //     headers: {
+    //       "Content-Type": "application/json",
+    //     },
+    //     body: JSON.stringify({
+    //       fields: {
+    //         1350: emailAddress,
+    //         1354: companyName,
+    //         1358: request,
+    //       },
+    //       subscribe: "false",
+    //     }),
+    //   }
+    // );
 
-    const jsonData = await response.json();
-    console.log(jsonData);
+    // const jsonData = await response.json();
+    // console.log(jsonData);
 
 
   };
@@ -155,7 +155,7 @@ export const ContactSales = () => {
               cols="50"
             ></textarea>
 
-            <button onClick={submitContactSales} type='button'>
+            <button onClick={submitContactSales}>
               {i18n.t("ContactSales.send")}
             </button>
           </div>
