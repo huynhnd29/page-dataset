@@ -77,6 +77,7 @@ export default {
     email_address: "Email Address",
     explain_your_request: "Please explain your request in detail.",
     send: "SEND",
+    status:'Your request has been sent successfully, we will response to you as soon as possible'
   },
   Footer:{
     let_dataset_launch:'Let Dataset launch your challenge to our network of more than 7000 workers and receive proposed solutions quickly and effectively for all types of data processing services.',

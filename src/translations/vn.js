@@ -80,6 +80,7 @@ export default {
     email_address: "Dịa chỉ email",
     explain_your_request: "Hãy miêu tả yêu cầu của bạn một cách chi tiết",
     send: "Gửi",
+    status:'Đã gửi thông tin thành công, chúng tôi sẽ liên hệ bạn sớm nhất có thể'
   },
   Footer:{
     let_dataset_launch:'Hãy để Dataset giải quyết vấn đề của bạn với mạng lưới hơn 7000 CTV của chúng tôi cùng vô vàn giải pháp được đề xuất nhằm xử lý nhanh chóng và hiệu quả cho tất cả các dịch vụ xử lý dữ liệu.',

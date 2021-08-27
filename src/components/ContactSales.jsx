@@ -79,6 +79,12 @@ const ContactSalesWapper = styled.header`
           align-items: center;
           justify-content: center;
         }
+        span {
+          color: #12ff05;
+          text-align: left;
+          margin-left: 1em;
+          margin-top: 1em;
+        }
       }
     }
   }
@@ -89,29 +95,31 @@ export const ContactSales = () => {
   const [emailAddress, setEmailAdress] = useState("");
   const [request, setRequest] = useState("");
 
+  const [isShow, setIsShow] = useState(false);
   const submitContactSales = async () => {
-    // const response = await fetch(
-    //   "https://us5.list-manage.com/contact-form/post?u=4a243de9d1f78a967090e5a3c&form_id=fcee6952ed984ebcfbc99617a5aad119",
-    //   {
-    //     method: "POST",
-    //     headers: {
-    //       "Content-Type": "application/json",
-    //     },
-    //     body: JSON.stringify({
-    //       fields: {
-    //         1350: emailAddress,
-    //         1354: companyName,
-    //         1358: request,
-    //       },
-    //       subscribe: "false",
-    //     }),
-    //   }
-    // );
-
-    // const jsonData = await response.json();
-    // console.log(jsonData);
-
-
+    const response = await fetch(
+      "https://getform.io/f/ccf44e3a-5798-4658-bc4b-8cc6a3399167",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: name,
+          companyName: companyName,
+          emailAddress: emailAddress,
+          request: request,
+        }),
+      }
+    );
+    console.log(response);
+    if (response.status === 200) {
+      setIsShow(true);
+      setName("");
+      setCompanyName("");
+      setEmailAdress("");
+      setRequest("");
+    }
   };
   return (
     <ContactSalesWapper id="contact">
@@ -154,8 +162,9 @@ export const ContactSales = () => {
               rows="4"
               cols="50"
             ></textarea>
+            {isShow ? <span>{i18n.t("ContactSales.status")}</span> : null}
 
-            <button onClick={submitContactSales}>
+            <button onClick={submitContactSales} type="button">
               {i18n.t("ContactSales.send")}
             </button>
           </div>
