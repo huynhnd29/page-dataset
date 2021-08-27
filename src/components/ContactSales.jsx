@@ -80,7 +80,7 @@ const ContactSalesWapper = styled.header`
           justify-content: center;
         }
         span {
-          color: #12ff05;
+          color: #09bb00;
           text-align: left;
           margin-left: 1em;
           margin-top: 1em;
@@ -115,6 +115,9 @@ export const ContactSales = () => {
     console.log(response);
     if (response.status === 200) {
       setIsShow(true);
+      setTimeout(() => {
+        setIsShow(false);
+      }, 5000);
       setName("");
       setCompanyName("");
       setEmailAdress("");
@@ -134,11 +137,15 @@ export const ContactSales = () => {
           <p>{i18n.t("ContactSales.struggling_data_ground_truth")}</p>
           <a>{i18n.t("ContactSales.let_dataset")}</a>
         </div>
-        <form class="form" action="https://getform.io/f/ccf44e3a-5798-4658-bc4b-8cc6a3399167" method="POST">
+        <form
+          class="form"
+          action="https://getform.io/f/ccf44e3a-5798-4658-bc4b-8cc6a3399167"
+          method="POST"
+        >
           <div class="view">
             <input
               type="text"
-              name = "name"
+              name="name"
               value={name}
               onChange={(e) => setName(e.target.value)}
               placeholder={i18n.t("ContactSales.your_name")}
@@ -152,7 +159,7 @@ export const ContactSales = () => {
             />
             <input
               type="text"
-              name = "emailAddress"
+              name="emailAddress"
               value={emailAddress}
               onChange={(e) => setEmailAdress(e.target.value)}
               placeholder={i18n.t("ContactSales.email_address")}
