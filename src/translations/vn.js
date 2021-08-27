@@ -37,7 +37,7 @@ export default {
     why_dataset: "Why Dataset",
     access_relatively: "Tiếp cận nguồn nhân lực khổng lồ với chi phí hợp lý",
     qualified_workers:
-      "Hơn 7000 CTV dày dặn kinh nghiệm của chúng tôi sẵn sàng thu thập dữ liệu bạn cần.",
+      "Hơn 7000 CTV dày dặn kinh nghiệm của chúng tôi sẵn sàng thu thập và xử lý dữ liệu bạn cần.",
   },
   TrustedBy: {
     trusted_by: "Đối tác tin cậy",
