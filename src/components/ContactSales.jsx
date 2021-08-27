@@ -94,34 +94,40 @@ export const ContactSales = () => {
   const [companyName, setCompanyName] = useState("");
   const [emailAddress, setEmailAdress] = useState("");
   const [request, setRequest] = useState("");
-
+  const [isLoading, setIsLoading] = useState(false);
   const [isShow, setIsShow] = useState(false);
   const submitContactSales = async () => {
-    const response = await fetch(
-      "https://getform.io/f/ccf44e3a-5798-4658-bc4b-8cc6a3399167",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name: name,
-          companyName: companyName,
-          emailAddress: emailAddress,
-          request: request,
-        }),
+    try {
+      setIsLoading(true);
+      const response = await fetch(
+        "https://getform.io/f/ccf44e3a-5798-4658-bc4b-8cc6a3399167",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            name: name,
+            companyName: companyName,
+            emailAddress: emailAddress,
+            request: request,
+          }),
+        }
+      );
+      console.log(response);
+      if (response.status === 200) {
+        setIsShow(true);
+        setTimeout(() => {
+          setIsShow(false);
+        }, 5000);
+        setName("");
+        setCompanyName("");
+        setEmailAdress("");
+        setRequest("");
       }
-    );
-    console.log(response);
-    if (response.status === 200) {
-      setIsShow(true);
-      setTimeout(() => {
-        setIsShow(false);
-      }, 5000);
-      setName("");
-      setCompanyName("");
-      setEmailAdress("");
-      setRequest("");
+      setIsLoading(false);
+    } catch (error) {
+      setIsLoading(false);
     }
   };
   return (
@@ -149,6 +155,7 @@ export const ContactSales = () => {
               value={name}
               onChange={(e) => setName(e.target.value)}
               placeholder={i18n.t("ContactSales.your_name")}
+              disabled={isLoading}
             />
             <input
               type="text"
@@ -156,6 +163,7 @@ export const ContactSales = () => {
               value={companyName}
               onChange={(e) => setCompanyName(e.target.value)}
               placeholder={i18n.t("ContactSales.company_name")}
+              disabled={isLoading}
             />
             <input
               type="text"
@@ -163,6 +171,7 @@ export const ContactSales = () => {
               value={emailAddress}
               onChange={(e) => setEmailAdress(e.target.value)}
               placeholder={i18n.t("ContactSales.email_address")}
+              disabled={isLoading}
             />
             <textarea
               type="text"
@@ -172,10 +181,15 @@ export const ContactSales = () => {
               placeholder={i18n.t("ContactSales.explain_your_request")}
               rows="4"
               cols="50"
+              disabled={isLoading}
             ></textarea>
             {isShow ? <span>{i18n.t("ContactSales.status")}</span> : null}
 
-            <button onClick={submitContactSales} type="button">
+            <button
+              onClick={submitContactSales}
+              type="button"
+              disabled={isLoading}
+            >
               {i18n.t("ContactSales.send")}
             </button>
           </div>
