@@ -5,6 +5,7 @@ import falink from "../image/falink.png";
 import lnIcon from "../image/lnIcon.png";
 import fbIcon from "../image/fbIcon.png";
 import i18n from "../i18n";
+import { Link } from "react-scroll";
 
 const FooterComponentWapper = styled.header`
   margin-top: 4em;
@@ -43,6 +44,9 @@ const FooterComponentWapper = styled.header`
           margin-bottom: 10px;
         }
       }
+      .pointer {
+        cursor: pointer;
+      }
     }
   }
 `;
@@ -65,18 +69,41 @@ export const FooterComponent = () => {
           </div>
           <div class="rfooter">
             <ul>
-              <li>{i18n.t("Footer.Company")}</li>
               <li>
-                <a>{i18n.t("Footer.About_us")}</a>
+                <a className="pointer">{i18n.t("Footer.Company")}</a>
               </li>
               <li>
-                <a>{i18n.t("Footer.Services")}</a>
+                <a className="pointer">
+                  <Link to="banner" smooth={true} duration={500} offset={-100}>
+                    {i18n.t("Footer.About_us")}
+                  </Link>
+                </a>
               </li>
               <li>
-                <a>{i18n.t("Footer.News")}</a>
+                <a className="pointer">
+                  <Link
+                    to="Services"
+                    smooth={true}
+                    duration={500}
+                    offset={-200}
+                  >
+                    {i18n.t("Footer.Services")}
+                  </Link>
+                </a>
               </li>
               <li>
-                <a>{i18n.t("Footer.Careers")}</a>
+                <a className="pointer">
+                  <Link to="News" smooth={true} duration={500} offset={-50}>
+                    {i18n.t("Footer.News")}
+                  </Link>
+                </a>
+              </li>
+              <li>
+                <a className="pointer">
+                  <Link to="Careers" smooth={true} duration={500} offset={-100}>
+                    {i18n.t("Footer.Careers")}
+                  </Link>
+                </a>
               </li>
             </ul>
             <ul>
@@ -97,9 +124,7 @@ export const FooterComponent = () => {
                 <a>E. info@dataset.vn</a>
               </li>
               <li>
-                <a>
-                {i18n.t("Footer.Adress")}
-                </a>
+                <a>{i18n.t("Footer.Adress")}</a>
               </li>
               <li>
                 <a>P. (+84) 98 442 0826</a>
