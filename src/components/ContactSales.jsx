@@ -134,28 +134,32 @@ export const ContactSales = () => {
           <p>{i18n.t("ContactSales.struggling_data_ground_truth")}</p>
           <a>{i18n.t("ContactSales.let_dataset")}</a>
         </div>
-        <form class="form">
+        <form class="form" action="https://getform.io/f/ccf44e3a-5798-4658-bc4b-8cc6a3399167" method="POST">
           <div class="view">
             <input
               type="text"
+              name = "name"
               value={name}
               onChange={(e) => setName(e.target.value)}
               placeholder={i18n.t("ContactSales.your_name")}
             />
             <input
               type="text"
+              name="companyName"
               value={companyName}
               onChange={(e) => setCompanyName(e.target.value)}
               placeholder={i18n.t("ContactSales.company_name")}
             />
             <input
               type="text"
+              name = "emailAddress"
               value={emailAddress}
               onChange={(e) => setEmailAdress(e.target.value)}
               placeholder={i18n.t("ContactSales.email_address")}
             />
             <textarea
               type="text"
+              name="request"
               value={request}
               onChange={(e) => setRequest(e.target.value)}
               placeholder={i18n.t("ContactSales.explain_your_request")}
