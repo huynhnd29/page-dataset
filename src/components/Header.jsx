@@ -60,7 +60,6 @@ const HeaderWapper = styled.header`
     border: 0;
     margin-left: 3em;
     cursor: pointer;
-    font-weight: ;
     img {
       width: 35px;
       height: 35px;
