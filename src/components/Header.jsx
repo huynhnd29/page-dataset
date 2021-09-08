@@ -60,6 +60,7 @@ const HeaderWapper = styled.header`
     border: 0;
     margin-left: 3em;
     cursor: pointer;
+    font-weight: ;
     img {
       width: 35px;
       height: 35px;
@@ -118,12 +119,13 @@ export const Header = ({ aboutUsFunction }) => {
           <a>{i18n.t("Header.contact_sales")}</a>
         </Link>
         <button onClick={changLangueLandingpage}>
-          <img
+          {/* <img
             src={i18n.languages[0] === "vi" ? unitedStates : vietnam}
             width="90"
             height="50"
             alt="submit"
-          />
+          /> */}
+          {i18n.languages[0] === "vi" ? "EN" : "VN" }
         </button>
       </div>
     </HeaderWapper>
