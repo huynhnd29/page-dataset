@@ -124,7 +124,7 @@ export const Header = ({ aboutUsFunction }) => {
             height="50"
             alt="submit"
           /> */}
-          {i18n.languages[0] === "vi" ? "EN" : "VN" }
+          {i18n.languages[0] === "vi" ? "EN" : "VI" }
         </button>
       </div>
     </HeaderWapper>
