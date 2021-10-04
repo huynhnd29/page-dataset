@@ -49,6 +49,36 @@ const FooterComponentWapper = styled.header`
       }
     }
   }
+  @media only screen and (max-width:400px){
+    margin-top: 2em;
+    padding: 0em 1em;
+    .container {
+      display: flex;
+      flex-direction: column;
+      .lfooter {
+        width: 100%;
+      }
+      .rfooter {
+        margin-left: -2em;
+        display: grid;
+        grid-template-columns: repeat(3, 0fr);
+        gap: 6px;
+        ul {
+          list-style-type: none;
+          padding-top: 30px;
+          li:first-child {
+            margin-bottom: 2em;
+          }
+          li {
+            margin-bottom: 10px;
+          }
+        }
+        .pointer {
+          cursor: pointer;
+        }
+      }
+    }
+  }
 `;
 export const FooterComponent = () => {
   return (

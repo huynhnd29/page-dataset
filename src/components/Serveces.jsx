@@ -17,7 +17,7 @@ const ServiceWapper = styled.header`
       width: 500px;
       margin: 0 1em;
       padding-bottom: 1em;
-      box-shadow: 4px 4px 8px 8px #d8e0e2;
+      box-shadow: 2px 2px 4px 4px #d8e0e2;
       border-radius: 10px;
       img {
         border-radius: 10px;
@@ -31,6 +31,35 @@ const ServiceWapper = styled.header`
       }
     }
   }
+  @media only screen and (max-width:400px){
+    margin-top: 400px;
+    padding: 0;
+    .body-services {
+    display: flex;
+    flex-direction: column;
+    div {
+      margin-top: 1em !important;
+      display: flex;
+      flex-direction: column;
+      width: 100vw;
+      margin: 0 0em;
+      padding-bottom: 1em;
+      box-shadow: 1px 1px 2px 2px #d8e0e2;
+      border-radius: 10px;
+      img {
+        border-radius: 8px;
+        width: 100%;
+        height: auto;
+      }
+      a {
+        text-align: start;
+        color: #718096;
+        padding: 0 1em;
+      }
+    }
+  }
+  }
+  
 `;
 export const Serveces = () => {
   return (

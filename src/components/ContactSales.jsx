@@ -88,6 +88,34 @@ const ContactSalesWapper = styled.header`
       }
     }
   }
+  @media only screen and (max-width:400px){
+    margin-top: 2em;
+    padding: 2em 0em;
+    div {
+      padding: 2em 1em;
+      max-width: 100vw;
+      border-radius: 28px;
+      .ContactSale-left {
+        display: none;
+      }
+      form {
+        width: 100vw !important;
+        .view {
+          width: 100% !important;
+          margin-left: 0px;
+          padding: 1em 0em;
+          border-radius: 0px;
+          box-shadow: 1px 1px 2px 2px #d8e0e2;
+          input {
+            width:85vw !important;
+          }
+          textarea {
+            width:85vw !important;
+          }
+        }
+      }
+    }
+  }
 `;
 export const ContactSales = () => {
   const [name, setName] = useState("");

@@ -91,6 +91,43 @@ const BannerWapper = styled.header`
   button {
     margin-top: 500px;
   }
+  @media only screen and (max-width:400px){
+    .title-banner-slider2{
+      padding-left: 2em;
+      padding-top: 2em;
+      width: 100%;
+      text-align: start;
+      h2{
+      font-weight: bold;
+      font-size: 20px;
+      color: white;
+      }
+    }
+    .header-img {
+    height: 443px;
+    width: 100%;
+    background-color: #000;
+      .header-slider2 {
+        padding-left: 1em;
+        width: 580px;
+        height: 310px;
+        margin-top: 3em;
+        margin-left: 50vw !important;
+        margin-right: 1em;
+      }
+    }
+      .title-banner-slider1 {
+        margin-left: 2%;
+        margin-right: 2%;
+        margin-top: 2em;
+        height: 378px;
+        text-align: start;
+        border-radius: 0px;
+        padding: 0 2em;
+      }
+    
+  }
+    
 `;
 
 function App() {

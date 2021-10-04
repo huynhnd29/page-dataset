@@ -22,11 +22,11 @@ const CareersWapper = styled.header`
       margin: 1em 1em;
       border-radius: 10px;
       display: grid;
-     grid-template-columns: repeat(2, 1fr);
-     gap: 30px;
-     align-items: center;
-     padding-right: 3em;
-     cursor: pointer;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      align-items: center;
+      padding-right: 3em;
+      cursor: pointer;
       img {
         width: 100%;
         height: auto;
@@ -81,7 +81,6 @@ const CareersWapper = styled.header`
   .careers-bottom {
     display: flex;
     justify-content:space-between;
-    }
     .careers-bottom-right {
       flex: 3;
       cursor: pointer;
@@ -107,7 +106,86 @@ const CareersWapper = styled.header`
     .careers-bottom-right:hover {
       background-color: white;
       box-shadow: 3px 3px 8px 8px #ecf0f1;
-        
+    }
+  }
+  @media only screen and (max-width:400px){
+    margin-top: -2em;
+    padding: 0 0em;
+    .careers-top {
+      display: flex;
+      flex-direction: column;
+      .careers-top-left {
+        display: flex;
+        flex-direction: column;
+        margin: 0em 0em;
+        border-radius: 0px;
+        align-items: center;
+        padding-right: 0em;
+        cursor: pointer;
+        img {
+          border-radius: 0px;
+        }
+        div {
+          padding: 0.5em 0.5em;
+          margin-top: -2em;
+          text-align: start;
+          h3 {
+            font-size: 32px;
+          }
+          a {
+            font-size: 16px;
+            line-height: 26px;
+            padding-right: 1em;
+            color: #9a9a9a;
+          }
+        }
+      }
+      .careers-top-right {
+        width: 100%;
+        border-radius: 0px;
+        margin-top: 1em;
+        margin-left: 0em;
+        margin-bottom: 1em;
+        cursor: pointer;
+        img {
+          border-radius: 0px;
+        }
+        div {
+          padding: 0.5em 0.5em;
+        }
+      }
+      .careers-top-right:hover {
+        box-shadow: 3px 3px 8px 8px #ecf0f1;
+        background-color: white;
+      }
+      .careers-top-left:hover  {
+        box-shadow: 3px 3px 8px 8px #ecf0f1;
+        background-color: white;
+      }
+    }
+    
+    .careers-bottom {
+      display: flex;
+      flex-direction: column;
+      .careers-bottom-right {
+        border-radius: 0px;
+        margin: 0.5em 0em;
+        img {
+          border-radius: 0px;
+        }
+        div {
+          display: flex;
+          flex-direction: column;
+          padding: 1em 1.5em;
+          a {
+            font-size: 22px;
+          }
+        }
+      }
+      .careers-bottom-right:hover {
+        background-color: white;
+        box-shadow: 3px 3px 8px 8px #ecf0f1;
+      }
     }
   }
 `;

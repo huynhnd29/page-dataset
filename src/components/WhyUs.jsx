@@ -75,7 +75,65 @@ const WhyUsWapper = styled.header`
         font-size: 25px;
       }
     }
-  }
+  
+   
+  @media only screen and (max-width:400px){
+    display: flex;
+    margin-top: 2em;
+    padding: 0 0em;
+    background-color: #f8f8f8;
+    flex-direction: column;
+    height: auto;
+
+    div {
+      img{
+          width: 40px;
+          height: 40px;
+        }
+        .whyus-right {
+        padding: 1em;
+        margin-top: -2em;
+        width: 100vw;
+        margin-right: 0em;
+        margin-left: 0em;
+        border-radius: 0px;
+        span {
+          margin-top: 1.5em;
+          color: white;
+          font-size: 20px;
+        }
+        h2 {
+          text-align: start;
+          color: white;
+          font-size: 25px;
+        }
+        a {
+          text-align: start;
+          color: white;
+          font-size: 20px;
+        }
+      }
+      .whyus-top {
+        display: flex;
+        margin: 7em 2em;
+        height: 60px;
+        div {
+          .whyus-service {
+            div{
+              span {
+              font-size: 20px;
+              font-weight: 600;
+              }
+            }
+            a {
+              text-align: start;
+              color: #9a9a9a;
+            }
+          }
+        }
+      }
+    }  
+  }  
 `;
 export const WhyUs = () => {
   return (
@@ -87,7 +145,7 @@ export const WhyUs = () => {
               <img src={service1} alt="" />
               <div className="whyus-service">
                 <div>
-                <CountUp start={0} end={500} redraw={true} suffix="+" duration={1.7}>
+                  <CountUp start={0} end={500} redraw={true} suffix="+" duration={1.7}>
                     {({ countUpRef, start }) => (
                       <VisibilitySensor onChange={start} delayedCall>
                         <span ref={countUpRef} />
@@ -122,7 +180,7 @@ export const WhyUs = () => {
               <img src={service3} alt="" />
               <div className="whyus-service">
                 <div>
-                <CountUp start={0} end={11} redraw={true} suffix="+" duration={1.7}>
+                  <CountUp start={0} end={11} redraw={true} suffix="+" duration={1.7}>
                     {({ countUpRef, start }) => (
                       <VisibilitySensor onChange={start} delayedCall>
                         <span ref={countUpRef} />
@@ -137,7 +195,7 @@ export const WhyUs = () => {
               <img src={service4} alt="" />
               <div className="whyus-service">
                 <div>
-                <CountUp start={0} end={15} redraw={true} suffix="+" duration={1.7}>
+                  <CountUp start={0} end={15} redraw={true} suffix="+" duration={1.7}>
                     {({ countUpRef, start }) => (
                       <VisibilitySensor onChange={start} delayedCall>
                         <span ref={countUpRef} />

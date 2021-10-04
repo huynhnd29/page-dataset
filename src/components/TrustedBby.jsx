@@ -24,6 +24,27 @@ const TrustByWapper = styled.header`
     justify-content: space-around;
     margin-top: 3em;
   }
+  @media only screen and (max-width:400px){
+    margin-top: 2em;
+    padding: 0 0em;
+    img {
+    width: 100%;
+    height: unset;
+  }
+    .trusted-top {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      margin-top: 1em;
+      align-items: center;
+      div {
+        margin-top: 2em;
+        width: 150px;
+        height: auto;
+      }
+    }
+  }
+
 `;
 export const TrustedBby = () => {
   return (

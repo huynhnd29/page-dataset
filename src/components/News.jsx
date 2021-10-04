@@ -42,6 +42,7 @@ const NewsWapper = styled.header`
   .news-left {
     margin-top: 2em;
     margin-right: 3em;
+
     div {
       display: flex;
       flex-direction: column;
@@ -77,6 +78,71 @@ const NewsWapper = styled.header`
       width: unset;
       height: 160px;
     }
+  }
+  @media only screen and (max-width:400px){
+    margin-top: 2em;
+    padding: 0 1em;
+    height: auto;
+    h1 {
+    padding-top: 2em;
+    }
+    span {
+      font-size: 20px;
+      font-weight: 600;
+    }
+    div {
+      display: flex;
+      justify-content: space-between;
+      
+      img {
+        border-radius: 10px;
+        margin-bottom: 4em;
+        width: 0%;
+        height: 0%;
+        display: block;
+      }
+    }
+    .news-left {
+    margin-top: 2em;
+    margin-right: 3em;
+    height: auto;
+    div {
+      display: flex;
+      flex-direction: column;
+      height: auto;
+      justify-content: space-around;
+      div {
+        p {
+          font-weight: bold;
+          font-size: 20px;
+          cursor: pointer;
+        }
+        a {
+          cursor: pointer;
+          margin-left: 1em;
+          margin-right: 1em;
+          left: 17.43%;
+          right: 53.96%;
+          top: 52.39%;
+          bottom: 45.8%;
+          text-decoration: none;
+          font-family: Inter;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 18px;
+          line-height: 22px;
+
+          color: #718096;
+        }
+      }
+    }
+    img {
+      margin-right: 2em;
+
+      width: unset;
+      height: 160px;
+    }
+  }
   }
 `;
 export const News = () => {
